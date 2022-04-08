@@ -1,0 +1,17 @@
+*{
+    box-sizing: border-box;
+}
+/*Computadora*/
+@media (max-width: 1020px){
+
+    header.headerIndex{
+        display: flex;
+        flex-direction: row;
+    }
+
+    
+}
+/*Tablet*/
+@media (max-width: 768px){
+
+}
