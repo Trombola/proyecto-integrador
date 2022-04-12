@@ -2,16 +2,20 @@
     box-sizing: border-box;
 }
 /*Computadora*/
-@media (max-width: 1020px){
 
-    header.headerIndex{
-        display: flex;
-        flex-direction: row;
+.headerIndex{
+    display: flex;
+    flex-direction: row;
+    height: 15vh;
+    border-bottom: 2px solid black;
+    justify-content: space-between;
     }
-
-    
+a{
+    text-decoration: none;
 }
 /*Tablet*/
 @media (max-width: 768px){
 
 }
+
+
