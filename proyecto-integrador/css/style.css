@@ -2,16 +2,18 @@
     box-sizing: border-box;
 }
 /*Computadora*/
-
+body{
+    background-image: url(../img/Fondos-para-páginas-web.jpg);
+}
 .headerIndex{
     display: flex;
     flex-direction: row;
     height: 15vh;
-    border-bottom: 2px solid black;
     justify-content: space-between;
     }
 a{
     text-decoration: none;
+    color: white;
 }
 /*Tablet*/
 @media (max-width: 768px){
