@@ -1,40 +1,56 @@
-*{
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
+
+body { margin: 0; }        
+
+ul, ol { padding: 0; }
+
+li { list-style-type: none; }
+
+a { text-decoration: none; color: #000; }
+
+
 /*Computadora*/
 body{ 
-background-image: url(../img/fondo-naranja.jpeg);
-<<<<< HEAD
-
-=======
-    background-image: url(../img/Fondos-para-páginas-web.jpg);
-    color: black;
->>>>>>> ffbcaebfe3e8e8d42c592b5e597aef90bbee478c
+    background-image: url(../img/fondo-naranja.jpeg);
 }
-.headerIndex{
+/*Header*/
+.header{
     display: flex;
     flex-direction: row;
     height: 15vh;
     justify-content: space-between;
     }
-a{
-    text-decoration: none;
-    color: grey;
-}
-/*Tablet*/
-@media (max-width: 768px){
 
+nav.nav{
+    display: flex;
+    flex-direction: row;
 }
+
+a.navbar{
+    padding-top: 5px;
+    padding-right: 30px;
+    padding-left: 30px;
+    color: white;
+}
+
+/*Index*/
+body.index{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+/* detalle de genero*/
 .imagenesGenero{
     display: flex;
     flex-direction: column;
     width: 30%;
     height: 30%;
 }
-.listaDetallesGenero{
-    list-style: none;
+
+
+/*Tablet*/
+@media (max-width: 768px){
+
 }
-
-
 
 
