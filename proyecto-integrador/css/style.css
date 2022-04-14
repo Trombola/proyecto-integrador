@@ -3,7 +3,12 @@
 }
 /*Computadora*/
 body{
+<<<<<<< HEAD
 
+=======
+    background-image: url(../img/Fondos-para-páginas-web.jpg);
+    color: white;
+>>>>>>> ffbcaebfe3e8e8d42c592b5e597aef90bbee478c
 }
 .headerIndex{
     display: flex;
