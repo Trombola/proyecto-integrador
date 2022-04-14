@@ -2,8 +2,9 @@
     box-sizing: border-box;
 }
 /*Computadora*/
-body{
-<<<<<<< HEAD
+body{ 
+background-image: url(../img/fondo-naranja.jpeg);
+<<<<< HEAD
 
 =======
     background-image: url(../img/Fondos-para-páginas-web.jpg);
@@ -29,6 +30,9 @@ a{
     flex-direction: column;
     width: 30%;
     height: 30%;
+}
+.listaDetallesGenero{
+    list-style: none;
 }
 
 
