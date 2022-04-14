@@ -27,9 +27,19 @@ a{
 }
 .imagenesGenero{
     display: flex;
-    flex-direction: column;
-    width: 30%;
-    height: 30%;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px;
+    width: 300px;
+
+}
+
+
+
+.sectionGeneros{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .listaDetallesGenero{
     list-style: none;
