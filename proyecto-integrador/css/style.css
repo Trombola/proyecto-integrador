@@ -12,6 +12,9 @@ a { text-decoration: none; color: #000; }
 /*Computadora*/
 body{ 
     background-image: url(../img/fondo-naranja.jpeg);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
 }
 /*Header*/
 .header{
@@ -34,11 +37,7 @@ a.navbar{
 }
 
 /*Index*/
-body.index{
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 10px;
-}
+
 /* detalle de genero*/
 .imagenesGenero{
     display: flex;

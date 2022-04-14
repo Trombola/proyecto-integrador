@@ -7,20 +7,30 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<header class="headerIndex">
-    <img src="./img/soundcloud-logo.png">
-    <div>
-       <form action="./search.html" method="get">
-          <input type="text" name="busqueda" placeholder="busqueda">
-          <button><i class="fa-solid fa-magnifying-glass"></i></button>
-       </form>
-    </div>
-    <nav>
-       <a href="./index.html">Home</a>
-       <a href="./generos.html">Generos</a>
-    </nav>
- </header>
+
 <body>
+   <header class="header">
+
+      <img src="./img/soundcloud-logo.png">
+
+      <nav id="nav" class="nav">
+         <a href="./index.html" class="navbar">Home</a>
+         <a href="./generos.html" class="navbar">Generos</a>
+         <a href="./detalleGeneros.html" class="navbar">Detalle Generos</a>
+         <a href="./playlist.html" class="navbar">Playlist</a>
+         <a href="./detalleAlbum.html" class="navbar">Detalle album</a>
+         <a href="./detalleArtista.html" class="navbar">Detalle artista</a>
+         <a href="./detalleCanciones.html" class="navbar">Detalle Canciones</a>
+      </nav>
+
+      <div class="formulario">
+         <form action="./search.html" method="get">
+            <input type="text" name="busqueda" placeholder="busqueda">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+         </form>
+      </div>
+
+   </header>
     <main class="mainGeneros">
 
     <h2>GENEROS</h2>
@@ -47,7 +57,9 @@
         
     </main>  
     
-
+    <footer>
+      <p>Louge, Rombola y Villanueva</p>
+    </footer>
     
     
 </body>
