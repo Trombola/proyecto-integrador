@@ -4,6 +4,7 @@
 /*Computadora*/
 body{
     background-image: url(../img/Fondos-para-páginas-web.jpg);
+    color: white;
 }
 .headerIndex{
     display: flex;
