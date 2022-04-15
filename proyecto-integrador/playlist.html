@@ -1,53 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playlist</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Playlist</title>
+   <link rel="stylesheet" href="./css/style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header class="header">
+   <header class="header">
 
-        <img src="./img/soundcloud-logo.png">
-  
-        <nav id="nav" class="nav">
-           <a href="./index.html" class="navbar">Home</a>
-           <a href="./generos.html" class="navbar">Generos</a>
-           <a href="./detalleGeneros.html" class="navbar">Detalle Generos</a>
-           <a href="./playlist.html" class="navbar">Playlist</a>
-           <a href="./detalleAlbum.html" class="navbar">Detalle album</a>
-           <a href="./detalleArtista.html" class="navbar">Detalle artista</a>
-           <a href="./detalleCanciones.html" class="navbar">Detalle Canciones</a>
-        </nav>
-  
-        <div class="formulario">
-           <form action="./search.html" method="get">
-              <input type="text" name="busqueda" placeholder="busqueda">
-              <button><i class="fa-solid fa-magnifying-glass"></i></button>
-           </form>
-        </div>
-  
-     </header>
-     <main>
-      <h1>Mi Playlist:</h1>
-      <h2>Canciones favoritas:</h2>
-      <ul>
-         <li><img src="./img/ScarTissue.jpg"> Scar Tissue</li>
-         <li>Porcelain</li>
-         <li>Around The World</li>
-         <li>Californication</li>
-         <li>Road Trippin</li>
-         <li>This Velvet Glove</li>
-         <li>Goteo</li>
-         <li>She don´t give a FO</li>
-      </ul>
+      <img src="./img/soundcloud-logo.png">
 
-     </main>
-     <footer>
-        <p>Louge, Rombola y Villanueva</p>
-     </footer>
+      <nav id="nav" class="nav">
+         <a href="./index.html" class="navbar">Home</a>
+         <a href="./generos.html" class="navbar">Generos</a>
+         <a href="./detalleGeneros.html" class="navbar">Detalle Generos</a>
+         <a href="./playlist.html" class="navbar">Playlist</a>
+         <a href="./detalleAlbum.html" class="navbar">Detalle album</a>
+         <a href="./detalleArtista.html" class="navbar">Detalle artista</a>
+         <a href="./detalleCanciones.html" class="navbar">Detalle Canciones</a>
+      </nav>
+
+      <div class="formulario">
+         <form action="./search.html" method="get">
+            <input type="text" name="busqueda" placeholder="busqueda">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+         </form>
+      </div>
+
+   </header>
+   <main>
+      <h1 class="playlist">Mi Playlist:</h1>
+   
+      <div class="playlist">
+         <ul>
+            <li class="playlist"><i class="fa-solid fa-heart playlist"></i><img src="./img/ScarTissue.jpg" class="playlist"> Scar Tissue</li>
+            <li class="playlist"><i class="fa-solid fa-heart playlist"></i><img src="./img/Californication.jpeg" alt="" class="playlist"> Porcelain</li>
+            <li class="playlist"><i class="fa-solid fa-heart playlist"></i><img src="./img/AroundTheWorld.jpg" alt="" class="playlist"> Around The World</li>
+         </ul>
+         <ul>
+            <li class="playlist"><i class="fa-solid fa-heart playlist"></i><img src="./img/Californication.jpeg" alt="" class="playlist"> Californication</li>
+            <li class="playlist"><i class="fa-solid fa-heart playlist"></i><img src="./img/RoadTrippin.jpg" alt="" class="playlist"> Road Trippin</li>
+            <li class="playlist"><i class="fa-solid fa-heart playlist"></i><img src="./img/Californication.jpeg" alt="" class="playlist"> This Velvet Glove</li>
+         </ul>
+         <ul>
+            <li class="playlist"><i class="fa-solid fa-heart playlist"></i><img src="./img/goteo.jpg" alt="" class="playlist"> Goteo</li>
+            <li class="playlist"><i class="fa-solid fa-heart playlist"></i><img src="./img/SheDontGiveAFO.png" alt="" class="playlist"> She don´t give a FO</li>
+            <li class="playlist"><i class="fa-solid fa-heart playlist"></i><img src="./img/rockstar.png" alt="" class="playlist"> Rockstar</li>
+         </ul>
+      </div>
+
+
+   </main>
+   <footer>
+      <p>Louge, Rombola y Villanueva</p>
+   </footer>
 </body>
+
 </html>
