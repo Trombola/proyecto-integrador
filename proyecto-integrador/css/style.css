@@ -10,6 +10,9 @@ a { text-decoration: none; color: #000; }
 
 
 /*Diseño para computadora*/
+@media (min-width: 1024px){
+
+}
 body{ 
     background-image: url(../img/fondo-naranja.jpeg);
     margin-left: 20px;
@@ -39,6 +42,11 @@ a.navbar{
 /*Index*/
 
 /*genero*/
+.tituloGeneros{
+    display: flex;
+    justify-content: center;
+    color: darkred;
+}
 .imagenesGenero{
     display: flex;
     flex-direction: row;
@@ -75,7 +83,15 @@ a.borde{
 /*detalle del genero*/
 
 .tituloDetalleGenero{
+    display: flex;
+    justify-content: center;
     font-size: 35px;
+    color: darkred;
+}
+
+.subtituloDetalleGenero{
+    display: flex;
+    justify-content: center;
     color: darkred;
 }
 section.detalleGeneros{
@@ -102,9 +118,31 @@ article.artDetalleGenero{
 
 /*Diseño para mobile*/
 @media (max-width: 420px){
+    
+/*genero*/
+.tituloGeneros{
+    display: flex;
+    justify-content: center;
+}
+nav.navGeneros{
+    display: none;
+}
+.imagenesGenero{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 20px;
+    width: 250px;
+    height: 250px;
 
-   
+}
 
+.sectionGeneros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 }
 
 
