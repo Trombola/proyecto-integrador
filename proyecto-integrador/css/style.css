@@ -38,7 +38,7 @@ a.navbar{
 
 /*Index*/
 
-/* detalle de genero*/
+/*genero*/
 .imagenesGenero{
     display: flex;
     flex-direction: row;
@@ -47,11 +47,53 @@ a.navbar{
     width: 300px;
 
 }
+nav.navGeneros{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+
+a.borde{
+    display: flex;
+    background-color: brown;
+    margin: 20px;
+    text-decoration: none;
+    color: white;
+    width: 180px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
 
 .sectionGeneros{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+/*detalle del genero*/
+
+.tituloDetalleGenero{
+    font-size: 35px;
+    color: darkred;
+}
+section.detalleGeneros{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.imagenesDetalleGenero{
+    display: flex;
+    flex-direction: row;
+    width: 250px;
+}
+
+article.artDetalleGenero{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 /*Playlist*/
