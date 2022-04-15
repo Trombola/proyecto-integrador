@@ -47,6 +47,7 @@ a.navbar{
     display: flex;
     justify-content: center;
     color: darkred;
+    font-family: 'Roboto Slab', serif;
 }
 .imagenesGenero{
     display: flex;
@@ -73,6 +74,7 @@ a.borde{
     height: 50px;
     align-items: center;
     justify-content: center;
+    font-family: 'Roboto Slab', serif;
 }
 
 .sectionGeneros{
@@ -80,6 +82,7 @@ a.borde{
     align-items: center;
     justify-content: center;
 }
+
 /*detalle del genero*/
 
 .tituloDetalleGenero{
@@ -87,12 +90,14 @@ a.borde{
     justify-content: center;
     font-size: 35px;
     color: darkred;
+    font-family: 'Roboto Slab', serif;
 }
 
 .subtituloDetalleGenero{
     display: flex;
     justify-content: center;
     color: darkred;
+    font-family: 'Roboto Slab', serif;
 }
 section.detalleGeneros{
     display: flex;
@@ -110,6 +115,10 @@ article.artDetalleGenero{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    font-family: 'Roboto Slab', serif;
+}
+p.artistasDetalleGenero{
+    display: none;
 }
 
 /*Playlist*/
@@ -138,7 +147,24 @@ i.playlist{
     color: white;
     margin-right: 10px;
 }
-
+/*Detalle cancion*/
+.tituloDetalleCancion{
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto Slab', serif;
+    color: darkred;
+}
+.imagenDetalleCancion{
+    display: flex;
+    width: 300px;
+}
+article.artDetalleCancion{
+    display: flex;
+    justify-content: center;
+}
+a.agregarAmiPlaylist{
+    color: darkred;
+}
 /*Diseño para mobile*/
 @media (max-width: 420px){
     
@@ -166,6 +192,63 @@ nav.navGeneros{
     align-items: center;
     justify-content: center;
 }
+
+/*detalle del genero*/
+
+.tituloDetalleGenero{
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    color: darkred;
 }
 
+.subtituloDetalleGenero{
+    display: flex;
+    justify-content: center;
+    color: darkred;
+}
+section.detalleGeneros{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+.imagenesDetalleGenero{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin: 20px;
+}
+
+article.artDetalleGenero{
+    display: none;
+    flex-direction: row;
+    justify-content: space-around;
+ } 
+ p.artistasDetalleGenero{
+     display: flex;
+     justify-content: center;
+     justify-items: center;
+     font-family: 'Roboto Slab', serif;
+ }
+ 
+ /*Detalle cancion*/
+.tituloDetalleCancion{
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto Slab', serif;
+    color: darkred;
+}
+.imagenDetalleCancion{
+    display: flex;
+    width: 250px;
+}
+article.artDetalleCancion{
+    display: flex;
+    justify-content: center;
+}
+a.agregarAmiPlaylist{
+    color: darkred;
+}
+}
