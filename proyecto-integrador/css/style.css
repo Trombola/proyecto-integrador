@@ -1,5 +1,7 @@
 * { box-sizing: border-box; }
 
+*{font-family: 'Roboto Slab', serif;}
+
 body { margin: 0; }        
 
 ul, ol { padding: 0; }
@@ -10,9 +12,7 @@ a { text-decoration: none; color: #000; }
 
 
 /*Diseño para computadora*/
-@media (min-width: 1024px){
 
-}
 body{ 
     background-image: url(../img/fondo-naranja.jpeg);
     margin-left: 20px;
@@ -20,7 +20,7 @@ body{
     margin-top: 10px;
 }
 /*Header*/
-.header{
+header.header{
     display: flex;
     flex-direction: row;
     height: 10vh;
@@ -37,17 +37,15 @@ a.navbar{
     margin-right: 30px;
     margin-left: 30px;
     color: white;
-    font-family: 'Roboto Slab', serif;
 }
 
-/*Index*/
+
 
 /*generos*/
 .tituloGeneros{
     display: flex;
     justify-content: center;
     color: darkred;
-    font-family: 'Roboto Slab', serif;
 }
 .imagenesGenero{
     display: flex;
@@ -74,7 +72,6 @@ a.borde{
     height: 50px;
     align-items: center;
     justify-content: center;
-    font-family: 'Roboto Slab', serif;
 }
 
 .sectionGeneros{
@@ -83,21 +80,20 @@ a.borde{
     justify-content: center;
 }
 
-/*detalle del genero*/
 
+
+/*detalle del genero*/
 .tituloDetalleGenero{
     display: flex;
     justify-content: center;
     font-size: 35px;
     color: darkred;
-    font-family: 'Roboto Slab', serif;
 }
 
 .subtituloDetalleGenero{
     display: flex;
     justify-content: center;
     color: darkred;
-    font-family: 'Roboto Slab', serif;
 }
 section.detalleGeneros{
     display: flex;
@@ -115,16 +111,15 @@ article.artDetalleGenero{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    font-family: 'Roboto Slab', serif;
 }
 p.artistasDetalleGenero{
     display: none;
 }
 
+
+
 /*Playlist*/
-h1.playlist{
-    font-family: 'Roboto Slab', serif;
-}
+
 div.playlist{
     display: flex;
     justify-content: space-evenly;
@@ -140,18 +135,22 @@ li.playlist{
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    font-family: 'Roboto Slab', serif;
 }
 
 i.playlist{
     color: white;
     margin-right: 10px;
 }
+
+i.playlist1{
+    margin-left: 8px;
+}
+
+
 /*Detalle cancion*/
 .tituloDetalleCancion{
     display: flex;
     justify-content: center;
-    font-family: 'Roboto Slab', serif;
     color: darkred;
 }
 .imagenDetalleCancion{
@@ -165,16 +164,47 @@ article.artDetalleCancion{
 a.agregarAmiPlaylist{
     color: darkred;
 }
-.letraDetalleCancion{
-    font-family: 'Roboto Slab', serif;
-}
 .colorTitulo{
     color: black;
     text-decoration: underline;
 }
+
+/*Search*/
+ul.search{
+    display: flex;
+    justify-content: space-around;
+
+}
+img.search{
+    width: 250px;
+    height: 187px;
+}
+li.search{
+    display: flex;
+    align-items: center;
+}
+
+
 /*Diseño para mobile*/
 @media (max-width: 420px){
-    
+
+/*Header*/
+header.header{
+    display: flex;
+    height: 50vh;
+    }
+
+nav.nav{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+img.header{
+    height: 15vh;
+    width: 20%;
+}
+
+
 /*genero*/
 .tituloGeneros{
     display: flex;
@@ -237,14 +267,12 @@ article.artDetalleGenero{
      display: flex;
      justify-content: center;
      justify-items: center;
-     font-family: 'Roboto Slab', serif;
  }
  
  /*Detalle cancion*/
 .tituloDetalleCancion{
     display: flex;
     justify-content: center;
-    font-family: 'Roboto Slab', serif;
     color: darkred;
 }
 .imagenDetalleCancion{
@@ -258,11 +286,20 @@ article.artDetalleCancion{
 a.agregarAmiPlaylist{
     color: darkred;
 }
-.letraDetalleCancion{
-    font-family: 'Roboto Slab', serif;
-}
 .colorTitulo{
     color: black;
     text-decoration: underline;
+}
+
+
+/*Playlist*/
+div.playlist{
+    display: flex;
+    flex-direction: column;
+}
+
+img.playlist{
+    width: 150px;
+    height: 112px;
 }
 }
