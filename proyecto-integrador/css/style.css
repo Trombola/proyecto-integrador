@@ -1,38 +1,50 @@
-* { box-sizing: border-box; }
+* {
+    box-sizing: border-box;
+}
 
-body { margin: 0; }        
+body {
+    margin: 0;
+}
 
-ul, ol { padding: 0; }
+ul,
+ol {
+    padding: 0;
+}
 
-li { list-style-type: none; }
+li {
+    list-style-type: none;
+}
 
-a { text-decoration: none; color: #000; }
+a {
+    text-decoration: none;
+    color: #000;
+}
 
 
 /*Diseño para computadora*/
-@media (min-width: 1024px){
+@media (min-width: 1024px) {}
 
-}
-body{ 
+body {
     background-image: url(../img/fondo-naranja.jpeg);
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 10px;
 }
+
 /*Header*/
-.header{
+.header {
     display: flex;
     flex-direction: row;
     height: 10vh;
     justify-content: space-between;
-    }
+}
 
-nav.nav{
+nav.nav {
     display: flex;
     flex-direction: row;
 }
 
-a.navbar{
+a.navbar {
     margin-top: 5px;
     margin-right: 30px;
     margin-left: 30px;
@@ -43,13 +55,14 @@ a.navbar{
 /*Index*/
 
 /*generos*/
-.tituloGeneros{
+.tituloGeneros {
     display: flex;
     justify-content: center;
     color: darkred;
     font-family: 'Roboto Slab', serif;
 }
-.imagenesGenero{
+
+.imagenesGenero {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -58,13 +71,13 @@ a.navbar{
 
 }
 
-nav.navGeneros{
+nav.navGeneros {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
 }
 
-a.borde{
+a.borde {
     display: flex;
     background-color: brown;
     margin: 20px;
@@ -77,7 +90,7 @@ a.borde{
     font-family: 'Roboto Slab', serif;
 }
 
-.sectionGeneros{
+.sectionGeneros {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -85,7 +98,7 @@ a.borde{
 
 /*detalle del genero*/
 
-.tituloDetalleGenero{
+.tituloDetalleGenero {
     display: flex;
     justify-content: center;
     font-size: 35px;
@@ -93,176 +106,214 @@ a.borde{
     font-family: 'Roboto Slab', serif;
 }
 
-.subtituloDetalleGenero{
+.subtituloDetalleGenero {
     display: flex;
     justify-content: center;
     color: darkred;
     font-family: 'Roboto Slab', serif;
 }
-section.detalleGeneros{
+
+section.detalleGeneros {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-.imagenesDetalleGenero{
+.imagenesDetalleGenero {
     display: flex;
     flex-direction: row;
     width: 250px;
 }
 
-article.artDetalleGenero{
+article.artDetalleGenero {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     font-family: 'Roboto Slab', serif;
 }
-p.artistasDetalleGenero{
+
+p.artistasDetalleGenero {
     display: none;
 }
 
 /*Playlist*/
-h1.playlist{
+h1.playlist {
     font-family: 'Roboto Slab', serif;
 }
-div.playlist{
+
+div.playlist {
     display: flex;
     justify-content: space-evenly;
 }
 
-img.playlist{
+img.playlist {
     width: 200px;
     height: 150px;
     margin-right: 20px
 }
 
-li.playlist{
+li.playlist {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
     font-family: 'Roboto Slab', serif;
 }
 
-i.playlist{
+i.playlist {
     color: white;
     margin-right: 10px;
 }
+
 /*Detalle cancion*/
-.tituloDetalleCancion{
+.tituloDetalleCancion {
     display: flex;
     justify-content: center;
     font-family: 'Roboto Slab', serif;
     color: darkred;
 }
-.imagenDetalleCancion{
+
+.imagenDetalleCancion {
     display: flex;
     width: 300px;
 }
-article.artDetalleCancion{
+
+article.artDetalleCancion {
     display: flex;
     justify-content: center;
 }
-a.agregarAmiPlaylist{
+
+a.agregarAmiPlaylist {
     color: darkred;
 }
-.letraDetalleCancion{
+
+.letraDetalleCancion {
     font-family: 'Roboto Slab', serif;
 }
-.colorTitulo{
+
+.colorTitulo {
     color: black;
     text-decoration: underline;
 }
+
 /*Diseño para mobile*/
-@media (max-width: 420px){
-    
-/*genero*/
-.tituloGeneros{
-    display: flex;
-    justify-content: center;
-}
-nav.navGeneros{
-    display: none;
-}
-.imagenesGenero{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin: 20px;
-    width: 250px;
-    height: 250px;
+@media (max-width: 420px) {
 
-}
+    /*genero*/
+    .tituloGeneros {
+        display: flex;
+        justify-content: center;
+    }
 
-.sectionGeneros{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+    nav.navGeneros {
+        display: none;
+    }
 
-/*detalle del genero*/
+    .imagenesGenero {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 20px;
+        width: 250px;
+        height: 250px;
 
-.tituloDetalleGenero{
-    display: flex;
-    justify-content: center;
-    font-size: 35px;
-    color: darkred;
-}
+    }
 
-.subtituloDetalleGenero{
-    display: flex;
-    justify-content: center;
-    color: darkred;
-}
-section.detalleGeneros{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+    .sectionGeneros {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 
-.imagenesDetalleGenero{
-    display: flex;
-    flex-direction: column;
-    width: 250px;
-    margin: 20px;
-}
+    /*detalle del genero*/
 
-article.artDetalleGenero{
-    display: none;
-    flex-direction: row;
-    justify-content: space-around;
- } 
- p.artistasDetalleGenero{
-     display: flex;
-     justify-content: center;
-     justify-items: center;
-     font-family: 'Roboto Slab', serif;
- }
- 
- /*Detalle cancion*/
-.tituloDetalleCancion{
-    display: flex;
-    justify-content: center;
-    font-family: 'Roboto Slab', serif;
-    color: darkred;
-}
-.imagenDetalleCancion{
-    display: flex;
-    width: 250px;
-}
-article.artDetalleCancion{
-    display: flex;
-    justify-content: center;
-}
-a.agregarAmiPlaylist{
-    color: darkred;
-}
-.letraDetalleCancion{
-    font-family: 'Roboto Slab', serif;
-}
-.colorTitulo{
-    color: black;
-    text-decoration: underline;
-}
+    .tituloDetalleGenero {
+        display: flex;
+        justify-content: center;
+        font-size: 35px;
+        color: darkred;
+    }
+
+    .subtituloDetalleGenero {
+        display: flex;
+        justify-content: center;
+        color: darkred;
+    }
+
+    section.detalleGeneros {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imagenesDetalleGenero {
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        margin: 20px;
+    }
+
+    article.artDetalleGenero {
+        display: none;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    p.artistasDetalleGenero {
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        font-family: 'Roboto Slab', serif;
+    }
+
+    /*Detalle cancion*/
+    .tituloDetalleCancion {
+        display: flex;
+        justify-content: center;
+        font-family: 'Roboto Slab', serif;
+        color: darkred;
+    }
+
+    .imagenDetalleCancion {
+        display: flex;
+        width: 250px;
+    }
+
+    article.artDetalleCancion {
+        display: flex;
+        justify-content: center;
+    }
+
+    a.agregarAmiPlaylist {
+        display: flex;
+        color: darkred;
+        justify-content: center;
+
+    }
+
+    .letraDetalleCancion {
+        font-family: 'Roboto Slab', serif;
+    }
+
+    .colorTitulo {
+        color: black;
+        text-decoration: underline;
+    }
+
+    .iframeDetalleCancion {
+        width: 300px;
+    }
+    article.artIframeDetalleCancion{
+        display: flex;
+        justify-content: center;
+
+    }
+    .artTitulosDetalleCancion{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
 }
