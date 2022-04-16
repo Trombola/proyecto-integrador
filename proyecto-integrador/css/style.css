@@ -2,15 +2,9 @@
     box-sizing: border-box;
 }
 
-<<<<<<< HEAD
 body {
     margin: 0;
 }
-=======
-*{font-family: 'Roboto Slab', serif;}
-
-body { margin: 0; }        
->>>>>>> 61c261abbdebab069a37119f43fe03cb261cf2bc
 
 ul,
 ol {
@@ -28,14 +22,9 @@ a {
 
 
 /*Diseño para computadora*/
-<<<<<<< HEAD
 @media (min-width: 1024px) {}
 
 body {
-=======
-
-body{ 
->>>>>>> 61c261abbdebab069a37119f43fe03cb261cf2bc
     background-image: url(../img/fondo-naranja.jpeg);
     margin-left: 20px;
     margin-right: 20px;
@@ -43,11 +32,7 @@ body{
 }
 
 /*Header*/
-<<<<<<< HEAD
 .header {
-=======
-header.header{
->>>>>>> 61c261abbdebab069a37119f43fe03cb261cf2bc
     display: flex;
     flex-direction: row;
     height: 10vh;
@@ -73,6 +58,8 @@ a.navbar {
     display: flex;
     justify-content: center;
     color: darkred;
+    font-family: 'Roboto Slab', serif;
+
 }
 
 .imagenesGenero {
@@ -100,6 +87,8 @@ a.borde {
     height: 50px;
     align-items: center;
     justify-content: center;
+    font-family: 'Roboto Slab', serif;
+
 }
 
 .sectionGeneros {
@@ -108,24 +97,23 @@ a.borde {
     justify-content: center;
 }
 
+/*Detalle genero*/
 
-<<<<<<< HEAD
 .tituloDetalleGenero {
-=======
-
-/*detalle del genero*/
-.tituloDetalleGenero{
->>>>>>> 61c261abbdebab069a37119f43fe03cb261cf2bc
     display: flex;
     justify-content: center;
     font-size: 35px;
     color: darkred;
+    font-family: 'Roboto Slab', serif;
+
 }
 
 .subtituloDetalleGenero {
     display: flex;
     justify-content: center;
     color: darkred;
+    font-family: 'Roboto Slab', serif;
+
 }
 
 section.detalleGeneros {
@@ -144,6 +132,8 @@ article.artDetalleGenero {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    font-family: 'Roboto Slab', serif;
+
 }
 
 p.artistasDetalleGenero {
@@ -153,16 +143,11 @@ p.artistasDetalleGenero {
 
 
 /*Playlist*/
-<<<<<<< HEAD
 h1.playlist {
     font-family: 'Roboto Slab', serif;
 }
 
 div.playlist {
-=======
-
-div.playlist{
->>>>>>> 61c261abbdebab069a37119f43fe03cb261cf2bc
     display: flex;
     justify-content: space-evenly;
 }
@@ -184,19 +169,13 @@ i.playlist {
     margin-right: 10px;
 }
 
-<<<<<<< HEAD
-=======
-i.playlist1{
-    margin-left: 8px;
-}
-
-
->>>>>>> 61c261abbdebab069a37119f43fe03cb261cf2bc
 /*Detalle cancion*/
 .tituloDetalleCancion {
     display: flex;
     justify-content: center;
     color: darkred;
+    font-family: 'Roboto Slab', serif;
+
 }
 
 .imagenDetalleCancion {
@@ -207,81 +186,29 @@ i.playlist1{
 article.artDetalleCancion {
     display: flex;
     justify-content: center;
+    font-family: 'Roboto Slab', serif;
+
 }
 
 a.agregarAmiPlaylist {
     color: darkred;
-}
-<<<<<<< HEAD
+    font-family: 'Roboto Slab', serif;
 
-.letraDetalleCancion {
+}
+
+p.letraDetalleCancion {
     font-family: 'Roboto Slab', serif;
 }
 
-.colorTitulo {
-=======
-.colorTitulo{
->>>>>>> 61c261abbdebab069a37119f43fe03cb261cf2bc
+.subrayadoTitulo {
     color: black;
     text-decoration: underline;
+    font-family: 'Roboto Slab', serif;
+
 }
 
-<<<<<<< HEAD
 /*Diseño para mobile*/
 @media (max-width: 420px) {
-=======
-/*Search*/
-ul.search{
-    display: flex;
-    justify-content: space-around;
-
-}
-img.search{
-    width: 250px;
-    height: 187px;
-}
-li.search{
-    display: flex;
-    align-items: center;
-}
-
-
-/*Diseño para mobile*/
-@media (max-width: 420px){
-
-/*Header*/
-header.header{
-    display: flex;
-    height: 50vh;
-    }
-
-nav.nav{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-img.header{
-    height: 15vh;
-    width: 20%;
-}
-
-
-/*genero*/
-.tituloGeneros{
-    display: flex;
-    justify-content: center;
-}
-nav.navGeneros{
-    display: none;
-}
-.imagenesGenero{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin: 20px;
-    width: 250px;
-    height: 250px;
->>>>>>> 61c261abbdebab069a37119f43fe03cb261cf2bc
 
     /*genero*/
     .tituloGeneros {
@@ -389,63 +316,18 @@ nav.navGeneros{
     .iframeDetalleCancion {
         width: 300px;
     }
-    article.artIframeDetalleCancion{
+
+    article.artIframeDetalleCancion {
         display: flex;
         justify-content: center;
 
     }
-    .artTitulosDetalleCancion{
+
+    .artTitulosDetalleCancion {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
 
-<<<<<<< HEAD
-=======
-article.artDetalleGenero{
-    display: none;
-    flex-direction: row;
-    justify-content: space-around;
- } 
- p.artistasDetalleGenero{
-     display: flex;
-     justify-content: center;
-     justify-items: center;
- }
- 
- /*Detalle cancion*/
-.tituloDetalleCancion{
-    display: flex;
-    justify-content: center;
-    color: darkred;
-}
-.imagenDetalleCancion{
-    display: flex;
-    width: 250px;
-}
-article.artDetalleCancion{
-    display: flex;
-    justify-content: center;
-}
-a.agregarAmiPlaylist{
-    color: darkred;
-}
-.colorTitulo{
-    color: black;
-    text-decoration: underline;
-}
-
-
-/*Playlist*/
-div.playlist{
-    display: flex;
-    flex-direction: column;
-}
-
-img.playlist{
-    width: 150px;
-    height: 112px;
-}
->>>>>>> 61c261abbdebab069a37119f43fe03cb261cf2bc
 }
