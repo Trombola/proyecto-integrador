@@ -53,6 +53,16 @@ a.navbar {
     margin-left: 30px;
     color: white;
 }
+/*footer*/
+footer{
+    height: 5vh;
+}
+ul.footer{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+}
+
 
 /*home*/
 .homeCanciones {
@@ -377,7 +387,11 @@ section.dalbum{
         height: 15vh;
         width: 20%;
     }
-
+    /*footer*/
+    ul.footer{
+        display: flex;
+        flex-direction: column;
+    }
 
     /*genero*/
     .tituloGeneros {
