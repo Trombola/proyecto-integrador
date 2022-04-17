@@ -148,6 +148,7 @@ i.playlist1{
 
 
 /*Detalle cancion*/
+
 .tituloDetalleCancion{
     display: flex;
     justify-content: center;
@@ -156,11 +157,14 @@ i.playlist1{
 .imagenDetalleCancion{
     display: flex;
     width: 300px;
+    margin-left: 35px;
 }
 article.artDetalleCancion{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+
 }
+
 a.agregarAmiPlaylist{
     color: darkred;
 }
@@ -168,6 +172,8 @@ a.agregarAmiPlaylist{
     color: black;
     text-decoration: underline;
 }
+
+
 
 /*Search*/
 ul.search{
@@ -284,11 +290,18 @@ article.artDetalleCancion{
     justify-content: center;
 }
 a.agregarAmiPlaylist{
+    display: flex;
+    justify-content: center;
     color: darkred;
 }
 .colorTitulo{
     color: black;
     text-decoration: underline;
+}
+.artTitulosDetalleCancion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
