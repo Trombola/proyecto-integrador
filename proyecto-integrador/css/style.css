@@ -392,13 +392,13 @@ img.playlist{
     color: white;
 }
 /*detalle Artista*/
-.detalles h1{
+.detalleArtista h1{
     text-align: center;
     font-size: 50px;
     color: white;
     }
 
-.detalles section{
+.detalleArtista section{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -406,12 +406,12 @@ img.playlist{
     width: 100%;
     padding: 20px 20px;
 }
-.detalles article{
+.detalleArtista article{
     width: 17%;
     margin: 2%;
 }
 
-.detalles article img{
+.detalleArtista article img{
     max-width: 500px;
 }
 .top5 {
