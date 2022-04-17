@@ -302,4 +302,54 @@ img.playlist{
     width: 150px;
     height: 112px;
 }
+
+    /*Detalle cancion*/
+    .tituloDetalleCancion {
+        display: flex;
+        justify-content: center;
+        font-family: 'Roboto Slab', serif;
+        color: darkred;
+    }
+
+    .imagenDetalleCancion {
+        display: flex;
+        width: 250px;
+    }
+
+    article.artDetalleCancion {
+        display: flex;
+        justify-content: center;
+    }
+
+    a.agregarAmiPlaylist {
+        display: flex;
+        color: darkred;
+        justify-content: center;
+
+    }
+
+    .letraDetalleCancion {
+        font-family: 'Roboto Slab', serif;
+    }
+
+    .colorTitulo {
+        color: black;
+        text-decoration: underline;
+    }
+
+    .iframeDetalleCancion {
+        width: 300px;
+    }
+
+    article.artIframeDetalleCancion {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .artTitulosDetalleCancion {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
