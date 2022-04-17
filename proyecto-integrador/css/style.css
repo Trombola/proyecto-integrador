@@ -391,3 +391,33 @@ img.playlist{
 .indexMain p{
     color: white;
 }
+/*detalle Artista*/
+.detalles h1{
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    }
+
+.detalles section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px 20px;
+}
+.detalles article{
+    width: 17%;
+    margin: 2%;
+}
+
+.detalles article img{
+    max-width: 500px;
+}
+.top5 {
+    color: white;
+
+} 
+.top5 h3{
+    font-size: 25px;
+}
