@@ -53,11 +53,17 @@ a.navbar {
     margin-left: 30px;
     color: white;
 }
+
+img.header1 {
+    display: none;
+}
+
 /*footer*/
-footer{
+footer {
     height: 5vh;
 }
-ul.footer{
+
+ul.footer {
     display: flex;
     justify-content: space-around;
     color: white;
@@ -95,6 +101,7 @@ ul.footer{
     align-items: center;
     justify-content: center;
 }
+
 /*album*/
 .homeAlbumes {
     display: flex;
@@ -165,6 +172,7 @@ ul.footer{
 .indexMain p {
     color: white;
 }
+
 
 /*detalle Artista*/
 .detalleArtista h1 {
@@ -376,7 +384,7 @@ li.search {
 }
 
 /*Detalle album*/
-section.dalbum{
+section.dalbum {
     display: flex;
     justify-content: space-around;
 }
@@ -387,20 +395,39 @@ section.dalbum{
     /*Header*/
     header.header {
         display: flex;
-        height: 50vh;
+        height: 30vh;
+        flex-direction: column;
+    }
+
+    form.header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        order: -1;
     }
 
     nav.nav {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    div.nav {
+        display: flex;
+        flex-direction: column;
     }
 
     img.header {
-        height: 15vh;
-        width: 20%;
+        display: none;
     }
+
+    img.header1 {
+        display: block;
+        height: 10vh;
+        width: 10vh;
+    }
+
     /*footer*/
-    ul.footer{
+    ul.footer {
         display: flex;
         flex-direction: column;
     }
@@ -583,55 +610,71 @@ a.agregarAmiPlaylist {
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-    }    
+    }
+
     img.search {
         width: 200px;
         height: 150px;
         margin-right: 10px;
     }
+
     /*Detalle album responsive*/
-    section.dalbum{
+    section.dalbum {
         display: flex;
         flex-direction: column;
     }
-    img.dalbum{
+
+    img.dalbum {
         width: 200px;
         height: 150px;
     }
+
     /*home responsive*/
-    .indexCanciones{
+    main.indexMain {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .indexCanciones {
         display: flex;
         justify-content: center;
         font-size: 40px;
     }
-    .indexAlbumes{
+
+    .indexAlbumes {
         display: flex;
         justify-content: center;
         font-size: 35px;
     }
-    .indexArtistas{
+
+    .indexArtistas {
         display: flex;
         justify-content: center;
         font-size: 35px;
     }
-    .homeArtistas{
+
+    .homeArtistas {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .homeCanciones{
+
+    .homeCanciones {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .homeAlbumes{
+
+    .homeAlbumes {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
+
     .homeCanciones p {
         width: 300%;
         height: 80px;
@@ -641,17 +684,15 @@ a.agregarAmiPlaylist {
         background-color: brown;
         margin-left: 0px;
     }
+
     .homeCanciones article img {
         width: 300%;
         max-height: 350px;
         height: 100%;
         align-items: center;
     }
-    .index{
-        margin-left: 0px;
-        margin-right: 80px;
-    }
-    .homeAlbumes p{
+
+    .homeAlbumes p {
         width: 300%;
         height: 80px;
         background-color: unset;
@@ -660,13 +701,15 @@ a.agregarAmiPlaylist {
         background-color: brown;
         margin-left: 0px;
     }
+
     .homeAlbumes article img {
         width: 300%;
         max-height: 350px;
         height: 100%;
         align-items: center;
     }
-    .homeArtistas p{
+
+    .homeArtistas p {
         width: 300%;
         height: 80px;
         background-color: unset;
@@ -675,37 +718,27 @@ a.agregarAmiPlaylist {
         background-color: brown;
         margin-left: 0px;
     }
+
     .homeArtistas article img {
         width: 300%;
         max-height: 350px;
         height: 100%;
         align-items: center;
     }
+
     /*detalle artista responsive*/
-    .dArtista{
+    main.detalleArtista {
         display: flex;
         flex-direction: column;
     }
-    .dArtista img{
-        width: 200px;
-        height: 150px;
-        margin-left: 50px;
-    }
-    .top5 h3{
-        max-height: 20px;
-        margin-top: 200px;
-        justify-content: left;
 
+    section.dArtista {
+        display: flex;
+        flex-direction: column;
     }
-    .listaCanciones {
-        margin-top: 100px;
-        justify-content: left;
-    }
-    .bodyartista{
-        margin-left: 0px;
-        margin-right: 200px;
-    }
-    .titulo{
-        margin-left: 135px;
+
+    img.imagen {
+        height: 200px;
+        width: 250px;
     }
 }
