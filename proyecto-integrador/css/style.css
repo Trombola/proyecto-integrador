@@ -376,6 +376,7 @@ section.dalbum{
     header.header {
         display: flex;
         height: 50vh;
+        flex-direction: column;
     }
 
     nav.nav {
