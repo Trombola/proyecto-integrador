@@ -291,7 +291,7 @@ p.artistasDetalleGenero {
 
 /*Playlist*/
 
-div.playlist {
+section.playlist {
     display: flex;
     justify-content: space-evenly;
 }
@@ -555,7 +555,7 @@ section.dalbum {
 
 
     /*Playlist*/
-    div.playlist {
+    section.playlist {
         display: flex;
         flex-direction: column;
     }
