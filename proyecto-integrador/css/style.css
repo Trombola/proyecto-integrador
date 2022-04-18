@@ -111,7 +111,7 @@ ul.footer{
 
 .homeAlbumes article img {
     width: 100%;
-    max-height: 350px;
+    max-height: 200px;
     height: 70%;
 }
 
@@ -121,8 +121,8 @@ ul.footer{
     margin: 20px;
     text-decoration: none;
     color: white;
-    width: 190px;
-    height: 20px;
+    width: 150px;
+    height: 50px;
     align-items: center;
     justify-content: center;
 }
@@ -576,5 +576,115 @@ section.dalbum{
     img.dalbum{
         width: 200px;
         height: 150px;
+    }
+    /*home responsive*/
+    .indexCanciones{
+        display: flex;
+        justify-content: center;
+        font-size: 40px;
+    }
+    .indexAlbumes{
+        display: flex;
+        justify-content: center;
+        font-size: 35px;
+    }
+    .indexArtistas{
+        display: flex;
+        justify-content: center;
+        font-size: 35px;
+    }
+    .homeArtistas{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .homeCanciones{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .homeAlbumes{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .homeCanciones p {
+        width: 300%;
+        height: 80px;
+        background-color: unset;
+        margin-bottom: 20px;
+        margin-top: 30px;
+        background-color: brown;
+        margin-left: 0px;
+    }
+    .homeCanciones article img {
+        width: 300%;
+        max-height: 350px;
+        height: 100%;
+        align-items: center;
+    }
+    .index{
+        margin-left: 0px;
+        margin-right: 80px;
+    }
+    .homeAlbumes p{
+        width: 300%;
+        height: 80px;
+        background-color: unset;
+        margin-bottom: 20px;
+        margin-top: 30px;
+        background-color: brown;
+        margin-left: 0px;
+    }
+    .homeAlbumes article img {
+        width: 300%;
+        max-height: 350px;
+        height: 100%;
+        align-items: center;
+    }
+    .homeArtistas p{
+        width: 300%;
+        height: 80px;
+        background-color: unset;
+        margin-bottom: 20px;
+        margin-top: 30px;
+        background-color: brown;
+        margin-left: 0px;
+    }
+    .homeArtistas article img {
+        width: 300%;
+        max-height: 350px;
+        height: 100%;
+        align-items: center;
+    }
+    /*detalle artista responsive*/
+    .dArtista{
+        display: flex;
+        flex-direction: column;
+    }
+    .dArtista img{
+        width: 200px;
+        height: 150px;
+        margin-left: 50px;
+    }
+    .top5 h3{
+        max-height: 20px;
+        margin-top: 200px;
+        justify-content: left;
+
+    }
+    .listaCanciones {
+        margin-top: 100px;
+        justify-content: left;
+    }
+    .bodyartista{
+        margin-left: 0px;
+        margin-right: 200px;
+    }
+    .titulo{
+        margin-left: 135px;
     }
 }
