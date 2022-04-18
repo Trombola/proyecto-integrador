@@ -11,38 +11,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
 </head>
 
-<body class="bodyartista">
+<body>
     <header class="header">
 
         <img src="./img/soundcloud-logo.png" class="header">
 
-        <nav id="nav" class="nav">
-            <a href="./index.html" class="navbar">Home</a>
-            <a href="./generos.html" class="navbar">Generos</a>
-            <a href="./detalleGeneros.html" class="navbar">Detalle Generos</a>
-            <a href="./playlist.html" class="navbar">Playlist</a>
-            <a href="./detalleAlbum.html" class="navbar">Detalle album</a>
-            <a href="./detalleArtista.html" class="navbar">Detalle artista</a>
-            <a href="./detalleCanciones.html" class="navbar">Detalle Canciones</a>
+        <nav class="nav">
+            <div class="nav">
+                <a href="./index.html" class="navbar">Home</a>
+                <a href="./generos.html" class="navbar">Generos</a>
+                <a href="./detalleGeneros.html" class="navbar">Detalle Generos</a>
+                <a href="./playlist.html" class="navbar">Playlist</a>
+            </div>
+            <div class="nav">
+                <a href="./detalleAlbum.html" class="navbar">Detalle album</a>
+                <a href="./detalleArtista.html" class="navbar">Detalle artista</a>
+                <a href="./detalleCanciones.html" class="navbar">Detalle Canciones</a>
+            </div>
         </nav>
 
-        <div class="formulario">
-            <form action="./search.html" method="get">
+        <form action="./search.html" method="get" class="header">
+            <img src="./img/soundcloud-logo.png" class="header1">
+            <div>
                 <input type="text" name="busqueda" placeholder="busqueda">
                 <button><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
-        </div>
+            </div>
+        </form>
 
     </header>
     <main class="detalleArtista">
         <h1 class="titulo">Travis Scott</h1>
         <section class="dArtista">
-            <article>
+            <article class="imagen">
                 <img class='imagen' src="../proyecto-integrador/img/trav.jpeg" alt="">
             </article>
             <article class="top5">
                 <h3>TOP 5 CANCIONES:</h3>
-                <ul class="listaCanciones">
+                <ul>
                     <li>goosbumps</li>
                     <li>SICKO MODE</li>
                     <li>BUTTERFLY EFFECT</li>
@@ -55,10 +60,10 @@
     </main>
     <footer>
         <ul class="footer">
-           <li>Louge, Rombola y Villanueva</li>
-           <li>Contacto: <a href="mailto:avillanuevaugarte@udesa.edu.ar">avillanuevaugarte@udesa.edu.ar</a></li>
+            <li>Louge, Rombola y Villanueva</li>
+            <li>Contacto: <a href="mailto:avillanuevaugarte@udesa.edu.ar">avillanuevaugarte@udesa.edu.ar</a></li>
         </ul>
-     </footer>
+    </footer>
 </body>
 
 </html>
