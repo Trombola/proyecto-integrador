@@ -331,30 +331,35 @@ i.playlist1 {
     width: 400px;
     margin-left: 50px;
 }
-ul.listaDetalleCancion{
+
+ul.listaDetalleCancion {
     text-decoration-style: none;
     font-size: 20px;
     color: black;
 }
-section.sectionDetalleCancion{
+
+section.sectionDetalleCancion {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.iframeDetalleCancion{
+.iframeDetalleCancion {
     margin-top: 20px;
     width: 80%;
 }
-.artIframeDetalleCancion{
+
+.artIframeDetalleCancion {
     display: flex;
     justify-content: center;
 }
-.artAgregarAmiPlaylist{
+
+.artAgregarAmiPlaylist {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 a.agregarAmiPlaylist {
     color: darkred;
 }
@@ -502,45 +507,50 @@ section.dalbum {
 
     /*Detalle cancion*/
 
-.tituloDetalleCancion {
-    display: flex;
-    justify-content: center;
-    color: darkred;
-}
+    .tituloDetalleCancion {
+        display: flex;
+        justify-content: center;
+        color: darkred;
+    }
 
-.imagenDetalleCancion {
-    display: flex;
-    width: 250px;
-    margin-left: 30px;
-}
-ul.listaDetalleCancion{
-    text-decoration-style: none;
-    font-size: 15px;
-    color: black;
-}
-section.sectionDetalleCancion{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
+    .imagenDetalleCancion {
+        display: flex;
+        width: 250px;
+        margin-left: 30px;
+    }
 
-.iframeDetalleCancion{
-    margin-top: 20px;
-    width: 350px;
-    height: 250px;
-}
-.artIframeDetalleCancion{
-    display: flex;
-    justify-content: center;
-}
-.artAgregarAmiPlaylist{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-a.agregarAmiPlaylist {
-    color: darkred;
-}
+    ul.listaDetalleCancion {
+        text-decoration-style: none;
+        font-size: 15px;
+        color: black;
+    }
+
+    section.sectionDetalleCancion {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .iframeDetalleCancion {
+        margin-top: 20px;
+        width: 350px;
+        height: 250px;
+    }
+
+    .artIframeDetalleCancion {
+        display: flex;
+        justify-content: center;
+    }
+
+    .artAgregarAmiPlaylist {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    a.agregarAmiPlaylist {
+        color: darkred;
+    }
 
 
 
