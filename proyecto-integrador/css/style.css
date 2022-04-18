@@ -205,6 +205,7 @@ ul.footer{
     display: flex;
     justify-content: center;
     color: darkred;
+    font-size: 35px;
 }
 
 .imagenesGenero {
@@ -319,25 +320,36 @@ i.playlist1 {
 
 .imagenDetalleCancion {
     display: flex;
-    width: 300px;
-    margin-left: 35px;
+    width: 400px;
+    margin-left: 50px;
 }
-
-article.artDetalleCancion {
+ul.listaDetalleCancion{
+    text-decoration-style: none;
+    font-size: 20px;
+    color: black;
+}
+section.sectionDetalleCancion{
     display: flex;
-    justify-content: space-around;
-
+    flex-direction: row;
+    justify-content: center;
 }
 
+.iframeDetalleCancion{
+    margin-top: 20px;
+    width: 80%;
+}
+.artIframeDetalleCancion{
+    display: flex;
+    justify-content: center;
+}
+.artAgregarAmiPlaylist{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 a.agregarAmiPlaylist {
     color: darkred;
 }
-
-.colorTitulo {
-    color: black;
-    text-decoration: underline;
-}
-
 
 
 /*Search*/
@@ -462,38 +474,47 @@ section.dalbum{
     }
 
     /*Detalle cancion*/
-    .tituloDetalleCancion {
-        display: flex;
-        justify-content: center;
-        color: darkred;
-    }
 
-    .imagenDetalleCancion {
-        display: flex;
-        width: 250px;
-    }
+.tituloDetalleCancion {
+    display: flex;
+    justify-content: center;
+    color: darkred;
+}
 
-    article.artDetalleCancion {
-        display: flex;
-        justify-content: center;
-    }
+.imagenDetalleCancion {
+    display: flex;
+    width: 250px;
+    margin-left: 30px;
+}
+ul.listaDetalleCancion{
+    text-decoration-style: none;
+    font-size: 15px;
+    color: black;
+}
+section.sectionDetalleCancion{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 
-    a.agregarAmiPlaylist {
-        display: flex;
-        justify-content: center;
-        color: darkred;
-    }
+.iframeDetalleCancion{
+    margin-top: 20px;
+    width: 350px;
+    height: 250px;
+}
+.artIframeDetalleCancion{
+    display: flex;
+    justify-content: center;
+}
+.artAgregarAmiPlaylist{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+a.agregarAmiPlaylist {
+    color: darkred;
+}
 
-    .colorTitulo {
-        color: black;
-        text-decoration: underline;
-    }
-
-    .artTitulosDetalleCancion {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
 
 
     /*Playlist*/
