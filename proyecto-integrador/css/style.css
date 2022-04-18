@@ -61,6 +61,7 @@ img.header1 {
 /*footer*/
 footer {
     height: 5vh;
+    justify-content: flex-end;
 }
 
 ul.footer {
@@ -404,7 +405,7 @@ section.dalbum {
         flex-direction: column;
     }
 
-    form.header {
+    div.headerResponsive {
         display: flex;
         align-items: center;
         justify-content: space-between;
