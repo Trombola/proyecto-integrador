@@ -647,8 +647,6 @@ section.dalbum {
     }
 
     .indexCanciones {
-        display: flex;
-        justify-content: center;
         font-size: 40px;
     }
 
@@ -667,22 +665,16 @@ section.dalbum {
     .homeArtistas {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
 
     .homeCanciones {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
 
     .homeAlbumes {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
 
     .homeCanciones p {
