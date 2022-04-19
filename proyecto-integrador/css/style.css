@@ -61,6 +61,7 @@ img.header1 {
 /*footer*/
 footer {
     height: 5vh;
+    justify-content: flex-end;
 }
 
 ul.footer {
@@ -291,7 +292,7 @@ p.artistasDetalleGenero {
 
 /*Playlist*/
 
-div.playlist {
+section.playlist {
     display: flex;
     justify-content: space-evenly;
 }
@@ -405,7 +406,7 @@ section.dalbum {
         flex-direction: column;
     }
 
-    form.header {
+    div.headerResponsive {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -558,7 +559,7 @@ section.dalbum {
 
 
     /*Playlist*/
-    div.playlist {
+    section.playlist {
         display: flex;
         flex-direction: column;
     }
