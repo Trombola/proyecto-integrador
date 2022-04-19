@@ -7,7 +7,10 @@
 }
 
 body {
-    margin: 0;
+    background-image: url(../img/fondo-naranja.jpeg);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
 }
 
 ul,
@@ -27,13 +30,6 @@ a {
 
 /*Diseño para computadora*/
 
-body {
-    background-image: url(../img/fondo-naranja.jpeg);
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 10px;
-}
-
 /*Header*/
 header.header {
     display: flex;
@@ -44,7 +40,6 @@ header.header {
 
 nav.nav {
     display: flex;
-    flex-direction: row;
 }
 
 a.navbar {
@@ -292,7 +287,7 @@ p.artistasDetalleGenero {
 
 /*Playlist*/
 
-section.playlist {
+article.playlist {
     display: flex;
     justify-content: space-evenly;
 }
@@ -559,7 +554,7 @@ section.dalbum {
 
 
     /*Playlist*/
-    section.playlist {
+    article.playlist {
         display: flex;
         flex-direction: column;
     }
