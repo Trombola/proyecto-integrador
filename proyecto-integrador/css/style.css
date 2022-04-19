@@ -339,6 +339,9 @@ ul.listaDetalleCancion {
     font-size: 20px;
     color: black;
 }
+.artTitulosDetalleCancion{
+ margin-top: 60px;
+}
 
 section.sectionDetalleCancion {
     display: flex;
