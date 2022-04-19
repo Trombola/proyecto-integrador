@@ -330,6 +330,7 @@ i.playlist1 {
     display: flex;
     width: 400px;
     margin-left: 50px;
+    height: 400px;
 }
 
 ul.listaDetalleCancion {
@@ -341,12 +342,12 @@ ul.listaDetalleCancion {
 section.sectionDetalleCancion {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .iframeDetalleCancion {
-    margin-top: 20px;
-    width: 80%;
+   width: 400px;
+   height: 400px;
 }
 
 .artIframeDetalleCancion {
@@ -514,10 +515,12 @@ section.dalbum {
     }
 
     .imagenDetalleCancion {
-        display: flex;
-        width: 250px;
-        margin-left: 30px;
+       display: flex;
+       justify-content: center;
+       height: 250px;
+       margin-left: 5px;
     }
+
 
     ul.listaDetalleCancion {
         text-decoration-style: none;
@@ -527,7 +530,7 @@ section.dalbum {
 
     section.sectionDetalleCancion {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
     }
 
