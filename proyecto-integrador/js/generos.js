@@ -6,16 +6,16 @@ fetch(url)
 })
 .then(function(data) {
 
-  let generos = data.response
+  let generos = data.data
+  console.log(generos);
   console.log(data);
 
   let section = document.querySelector('.sectionGeneros')
-  for (let i = 0; i < 5; i++) {
-    section.innerHTML +=  
-    `<article>
-    <a class="aGeneros" href=""><img class="imagenesGenero" src="${generos[i].picture_medium}"
+  for (let i = 1; i < 5; i++) {
+    section.innerHTML +=  `<article>
+    <a class="aGeneros" href="./detalleGenero.html"><img class="imagenesGenero" src="${generos[i].picture_medium}"
           alt=""></a>
-          <p>${generos[i].name}</p>
+          <p class="pSection" >${generos[i].name}</p>
  </article>`
 
     

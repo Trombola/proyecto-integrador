@@ -744,3 +744,8 @@ section.dalbum {
         width: 250px;
     }
 }
+
+.pSection{
+    display: flex;
+    justify-content: space-around;
+}
