@@ -65,106 +65,23 @@ ul.footer {
 
 
 /*home*/
-.homeCanciones {
+
+section.estiloSec{
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
+    justify-content: space-evenly;
 }
 
-.homeCanciones article {
-    width: 15%;
-    margin: 2%;
-}
-
-.homeCanciones article img {
-    width: 100%;
-    max-height: 350px;
-    height: 70%;
-}
-
-.homeCanciones p {
+article.article{
     display: flex;
-    background-color: brown;
-    margin: 20px;
-    text-decoration: none;
-    color: white;
-    width: 150px;
-    height: 20px;
+    flex-direction: column;
+    height: 300px;
+    width: 300px;
     align-items: center;
-    justify-content: center;
 }
 
-/*album*/
-.homeAlbumes {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-}
-
-.homeAlbumes article {
-    width: 15%;
-    margin: 2%;
-}
-
-.homeAlbumes article img {
-    width: 100%;
-    max-height: 200px;
-    height: 70%;
-}
-
-.homeAlbumes p {
-    display: flex;
-    background-color: brown;
-    margin: 20px;
-    text-decoration: none;
-    color: white;
-    width: 150px;
-    height: 50px;
-    align-items: center;
-    justify-content: center;
-}
-
-.homeArtistas {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-}
-
-.homeArtistas article {
-    width: 15%;
-    margin: 2%;
-}
-
-.homeArtistas article img {
-    width: 100%;
-    max-height: 350px;
-    height: 70%;
-}
-
-.homeArtistas p {
-    display: flex;
-    background-color: brown;
-    margin: 20px;
-    text-decoration: none;
-    color: white;
-    width: 150px;
-    height: 20px;
-    align-items: center;
-    justify-content: center;
-}
-
-.indexMain h2 {
-    color: white;
-}
-
-.indexMain p {
-    color: white;
+.picture{
+    width: 200px;
+    height: 200px;
 }
 
 
@@ -640,93 +557,7 @@ section.dalbum {
     }
 
     /*home responsive*/
-    main.indexMain {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .indexCanciones {
-        font-size: 40px;
-    }
-
-    .indexAlbumes {
-        display: flex;
-        justify-content: center;
-        font-size: 35px;
-    }
-
-    .indexArtistas {
-        display: flex;
-        justify-content: center;
-        font-size: 35px;
-    }
-
-    .homeArtistas {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .homeCanciones {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .homeAlbumes {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .homeCanciones p {
-        width: 300%;
-        height: 80px;
-        background-color: unset;
-        margin-bottom: 20px;
-        margin-top: 30px;
-        background-color: brown;
-        margin-left: 0px;
-    }
-
-    .homeCanciones article img {
-        width: 300%;
-        max-height: 350px;
-        height: 100%;
-        align-items: center;
-    }
-
-    .homeAlbumes p {
-        width: 300%;
-        height: 80px;
-        background-color: unset;
-        margin-bottom: 20px;
-        margin-top: 30px;
-        background-color: brown;
-        margin-left: 0px;
-    }
-
-    .homeAlbumes article img {
-        width: 300%;
-        max-height: 350px;
-        height: 100%;
-        align-items: center;
-    }
-
-    .homeArtistas p {
-        width: 300%;
-        height: 80px;
-        background-color: unset;
-        margin-bottom: 20px;
-        margin-top: 30px;
-        background-color: brown;
-        margin-left: 0px;
-    }
-
-    .homeArtistas article img {
-        width: 300%;
-        max-height: 350px;
-        height: 100%;
-        align-items: center;
-    }
 
     /*detalle artista responsive*/
     main.detalleArtista {
