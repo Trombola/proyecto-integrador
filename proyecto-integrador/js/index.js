@@ -8,6 +8,7 @@ fetch('https://api.allorigins.win/raw?url= https://api.deezer.com/chart')
 })
 .then(function (data) {
     console.log(data);
+    console.log(data.artists.data[0].id);
     /* Seccion de las canciones */
     for (let i = 0; i < 5; i++) {
     let titulo = data.tracks.data[i].title
@@ -36,10 +37,11 @@ fetch('https://api.allorigins.win/raw?url= https://api.deezer.com/chart')
     for (let i = 0; i < 5; i++) {
         let nombreArtista = data.artists.data[i].name
         let imagenes = data.artists.data[i].picture
+        let id = data.artists.data[i].id
             secArtistas.innerHTML += `
         <article class="article">
         <p>${nombreArtista}</p>
-        <a href=""> <img src="${imagenes}" alt='' class='picture'></a>
+        <a href="./detalleArtista.html?id=${id}"> <img src="${imagenes}" alt='' class='picture'></a>
         </article>`
         }
 })
