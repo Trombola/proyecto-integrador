@@ -10,7 +10,7 @@ fetch(url)
   console.log(generos);
   console.log(data);
 
-  let guardarDatinis = ""
+  let guardarDatinis = ''
 
   let section = document.querySelector('.sectionGeneros')
   
