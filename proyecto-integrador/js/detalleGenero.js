@@ -17,11 +17,15 @@ fetch(url2) // traes los artistas del genero seleccionado
 .then(function(response) {
   return response.json()
 })
-.then(function(res1) {
-  console.log(res1);
-  for (let i = 0; i < res.data.length; i++) {
+.then(function(res2) {
+  console.log(res2);
+  for (let i = 0; i < 5; i++) {
     if (capturarID==res.data[i].id)
     console.log(res.data[i].name);
+    secGenero.innerHTML += `<article>
+    <img class="imagenesDetalleGenero" src="${res2.data[i].picture_medium}" alt="">
+          <p class="pSection" >${res2.data[i].name}</p>
+ </article>`
   }
 })
 .catch(function(error) {
