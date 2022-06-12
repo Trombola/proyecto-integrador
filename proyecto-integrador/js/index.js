@@ -1,6 +1,7 @@
-let secCanciones = document.querySelector('.homeCanciones')
-let secAlbums = document.querySelector('.homeAlbumes')
-let secArtistas = document.querySelector('.homeArtistas')
+
+let listCanciones = document.querySelector('.lisCan')
+let listAlbums = document.querySelector('.lisAlb')
+let listArtistas = document.querySelector('.lisArt')
 
 fetch('https://api.allorigins.win/raw?url= https://api.deezer.com/chart')
 .then(function (response) {
@@ -10,11 +11,11 @@ fetch('https://api.allorigins.win/raw?url= https://api.deezer.com/chart')
     console.log(data);
     console.log(data.artists.data[0].id);
     /* Seccion de las canciones */
-    for (let i = 0; i < 5; i++) {
+    for (let i = 5; i < 10; i++) {
     let titulo = data.tracks.data[i].title
     let nombreArtista = data.tracks.data[i].artist.name
     let imagenes = data.tracks.data[i].artist.picture
-        secCanciones.innerHTML += `
+        listCanciones.innerHTML += `
     <article class="article">
     <p>${titulo}</p>
     <p>${nombreArtista}</p>
@@ -23,14 +24,16 @@ fetch('https://api.allorigins.win/raw?url= https://api.deezer.com/chart')
     }
     /* Seccion albums */
     for (let i = 0; i < 5; i++) {
-        let titulo = data.albums.data[i].title
-        let nombreArtista = data.albums.data[i].artist.name
-        let imagenes = data.albums.data[i].cover
-            secAlbums.innerHTML += `
+        let titulo = data.albums.data[i].title;
+        let nombreArtista = data.albums.data[i].artist.name;
+        let imagenes = data.albums.data[i].cover;
+        let id = data.albums.data[i].id;
+        
+            listAlbums.innerHTML += `
         <article class="article">
         <p>${titulo}</p>
         <p>${nombreArtista}</p>
-        <a href=""> <img src="${imagenes}" alt='' class='picture'></a>
+        <a href="./detalleAlbum.html?id=${id}"> <img src="${imagenes}" alt='' class='picture'></a>
         </article>`
         }
     // Seccion artistas
@@ -38,7 +41,7 @@ fetch('https://api.allorigins.win/raw?url= https://api.deezer.com/chart')
         let nombreArtista = data.artists.data[i].name
         let imagenes = data.artists.data[i].picture
         let id = data.artists.data[i].id
-            secArtistas.innerHTML += `
+            listArtistas.innerHTML += `
         <article class="article">
         <p>${nombreArtista}</p>
         <a href="./detalleArtista.html?id=${id}"> <img src="${imagenes}" alt='' class='picture'></a>

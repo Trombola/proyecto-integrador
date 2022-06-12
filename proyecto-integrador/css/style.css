@@ -66,12 +66,10 @@ ul.footer {
 
 /*home*/
 
-section.estiloSec{
+.lisStyle{
     display: flex;
-    justify-content: space-evenly;
 }
-
-article.article{
+.article{
     display: flex;
     flex-direction: column;
     height: 300px;

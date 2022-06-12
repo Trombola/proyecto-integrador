@@ -10,14 +10,25 @@ fetch(`https://api.allorigins.win/raw?url= https://api.deezer.com/artist/${captu
         return response.json();
     })
     .then(function (data) {
+        console.log(data);
         fetch(`https://api.allorigins.win/raw?url= ${data.tracklist}`)
             .then(function (response) {
                 return response.json();
             })
             .then(function (data2) {
-                for (let i = 0; i < 5; i++) {
-                    guardarDatos += `<li>${data2.data[i].title}</li>`
+                console.log(data2);
+            let contador = 0   
+            let guardarValor = data2.data[0].album.title
+            for (let i = 0; i < data2.data.length ; i++) {
+                
+                if(contador<5){
+                    if (data2.data[i].album.title != guardarValor) {
+                        guardarDatos += `<a href="./detalleAlbum.html?id=${data2.data[i].album.id}"><li>${data2.data[i].album.title}</li></a>`
+                        contador++
+                    }
                 }
+                    guardarValor = data2.data[i].album.title
+                }            
 
                 console.log(guardarDatos);
 
@@ -27,7 +38,7 @@ fetch(`https://api.allorigins.win/raw?url= https://api.deezer.com/artist/${captu
                 <img src="${data.picture}" alt="">
             </article>
             <article class='art'>
-                <h3>TOP 5 CANCIONES:</h3>
+                <h3>Albums:</h3>
                 <ul>
                     ${guardarDatos}
                 </ul>
