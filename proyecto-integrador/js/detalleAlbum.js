@@ -25,7 +25,7 @@ fetch(`https://api.allorigins.win/raw?url= https://api.deezer.com/album/${captur
                 <a href="./detalleArtista.html?id=${data.artist.id}"><p class='estreno'>${data.artist.name}</p></a>
 
                 <h3>GENERO:</h3>
-                <p class='rating'>${data.genres.data[0].name}</p>
+                <a class="aGeneros" href="./detalleGeneros.html?id=${data.genres.data[0].id}"><p class='rating'>${data.genres.data[0].name}</p></a>
 
                 <h3>FECHA DE PUBLICACION:</h3>
                 <p class='rating'>${data.release_date} </p>

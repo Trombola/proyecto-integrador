@@ -1,31 +1,17 @@
-* {
-    box-sizing: border-box;
-}
+* {box-sizing: border-box;}
+* {font-family: 'Roboto Slab', serif;}
 
-* {
-    font-family: 'Roboto Slab', serif;
-}
-
-body {
-    background-image: url(../img/fondo-naranja.jpeg);
+body {background-image: url(../img/fondo-naranja.jpeg);
     margin-left: 20px;
     margin-right: 20px;
-    margin-top: 10px;
-}
+    margin-top: 10px;}
 
-ul,
-ol {
-    padding: 0;
-}
+ul,ol {padding: 0;}
 
-li {
-    list-style-type: none;
-}
+li {list-style-type: none;}
 
-a {
-    text-decoration: none;
-    color: #000;
-}
+a {text-decoration: none;
+    color: #000;}
 
 
 /*Diseño para computadora*/
@@ -208,53 +194,6 @@ i.playlist1 {
 
 /*Detalle cancion*/
 
-.tituloDetalleCancion {
-    display: flex;
-    justify-content: center;
-    color: darkred;
-}
-
-.imagenDetalleCancion {
-    display: flex;
-    width: 400px;
-    margin-left: 50px;
-    height: 400px;
-}
-
-ul.listaDetalleCancion {
-    text-decoration-style: none;
-    font-size: 25px;
-    color: black;
-}
-.artTitulosDetalleCancion{
- margin-top: 60px;
-}
-
-section.sectionDetalleCancion {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.iframeDetalleCancion {
-   width: 400px;
-   height: 400px;
-}
-
-.artIframeDetalleCancion {
-    display: flex;
-    justify-content: center;
-}
-
-.artAgregarAmiPlaylist {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-a.agregarAmiPlaylist {
-    color: darkred;
-}
 
 
 /*Search*/
