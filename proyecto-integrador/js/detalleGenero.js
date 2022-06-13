@@ -6,6 +6,7 @@ let secGenero = document.querySelector('.detalleGeneros')
 
 const url = `https://api.allorigins.win/raw?url=https://api.deezer.com/genre` // de aca sacas el genero
 const url2 = `https://api.allorigins.win/raw?url=https://api.deezer.com/genre/${capturarID}/artists` // de aca sacas el artista
+
 fetch(url) // traes todos los generos
 .then(function(response) {
   return response.json()
@@ -22,10 +23,10 @@ fetch(url2) // traes los artistas del genero seleccionado
   for (let i = 0; i < 5; i++) {
     if (capturarID==res.data[i].id)
     console.log(res.data[i].name);
-    secGenero.innerHTML += `<article>
+    secGenero.innerHTML += ` <a href="./detalleArtista.html?id=${res2.data[i].id}"><article>
     <img class="imagenesDetalleGenero" src="${res2.data[i].picture_medium}" alt="">
           <p class="pSection" >${res2.data[i].name}</p>
- </article>`
+ </article></a>`
   }
 })
 .catch(function(error) {
@@ -36,4 +37,9 @@ fetch(url2) // traes los artistas del genero seleccionado
 .catch(function(error) {
   console.log("Error: " + error);
 })
+
+
+
+
+
 
