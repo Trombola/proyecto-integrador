@@ -15,11 +15,12 @@ fetch('https://api.allorigins.win/raw?url= https://api.deezer.com/chart')
     let titulo = data.tracks.data[i].title
     let nombreArtista = data.tracks.data[i].artist.name
     let imagenes = data.tracks.data[i].artist.picture
+    let id = data.tracks.data[i].id
         listCanciones.innerHTML += `
     <article class="article">
     <p>${titulo}</p>
     <p>${nombreArtista}</p>
-    <a href=""> <img src="${imagenes}" alt='' class='picture'></a>
+    <a href="./detalleCanciones.html?id=${id}"> <img src="${imagenes}" alt='' class='picture'></a>
     </article>`
     }
     /* Seccion albums */

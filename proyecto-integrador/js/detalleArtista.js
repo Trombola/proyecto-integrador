@@ -21,7 +21,7 @@ fetch(`https://api.allorigins.win/raw?url= https://api.deezer.com/artist/${captu
             let guardarValor = data2.data[0].album.title
             for (let i = 0; i < data2.data.length ; i++) {
                 
-                if(contador<5){
+                if(contador<3){
                     if (data2.data[i].album.title != guardarValor) {
                         guardarDatos += `<a href="./detalleAlbum.html?id=${data2.data[i].album.id}"><li>${data2.data[i].album.title}</li></a>`
                         contador++
