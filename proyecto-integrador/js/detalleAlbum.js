@@ -13,7 +13,7 @@ fetch(`https://api.allorigins.win/raw?url= https://api.deezer.com/album/${captur
         let listaCanciones = ''
         
         for (let i = 0; i < data.tracks.data.length; i++) {
-           listaCanciones += `<li>${data.tracks.data[i].title} </li>`
+           listaCanciones += `<a class="aGeneros" href="./detalleCanciones.html?id=${data.tracks.data[i].id}"><li>${data.tracks.data[i].title}</li></a>`
         }
         sec.innerHTML = `
             <article>

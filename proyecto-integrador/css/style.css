@@ -195,35 +195,19 @@ i.playlist1 {
 /*Detalle cancion*/
 
 
-
 /*Search*/
-section.search {
-    display: flex;
-    justify-content: space-between;
-}
 
-ul.search {
+.search{
+    display: flex;
+    justify-content: space-around;
+}
+.arti,.alb,.can{
     display: flex;
     flex-direction: column;
 }
 
-img.search {
-    width: 250px;
-    height: 187px;
-    margin-right: 10px;
-}
-
-li.search {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
 /*Detalle album*/
-section.dalbum {
-    display: flex;
-    justify-content: space-around;
-}
+
 
 /*Diseño para mobile*/
 @media (max-width: 420px) {
@@ -338,52 +322,7 @@ section.dalbum {
 
     /*Detalle cancion*/
 
-    .tituloDetalleCancion {
-        display: flex;
-        justify-content: center;
-        color: darkred;
-    }
 
-    .imagenDetalleCancion {
-       display: flex;
-       justify-content: center;
-       height: 250px;
-       margin-left: 5px;
-    }
-
-
-    ul.listaDetalleCancion {
-        text-decoration-style: none;
-        font-size: 15px;
-        color: black;
-    }
-
-    section.sectionDetalleCancion {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .iframeDetalleCancion {
-        margin-top: 20px;
-        width: 350px;
-        height: 250px;
-    }
-
-    .artIframeDetalleCancion {
-        display: flex;
-        justify-content: center;
-    }
-
-    .artAgregarAmiPlaylist {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    a.agregarAmiPlaylist {
-        color: darkred;
-    }
 
 
 
@@ -449,17 +388,7 @@ section.dalbum {
     }
 
     /*Search responsive*/
-    section.search {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-    }
-
-    img.search {
-        width: 200px;
-        height: 150px;
-        margin-right: 10px;
-    }
+    
 
     /*Detalle album responsive*/
     section.dalbum {

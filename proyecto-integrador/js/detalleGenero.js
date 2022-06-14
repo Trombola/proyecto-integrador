@@ -20,9 +20,13 @@ fetch(url2) // traes los artistas del genero seleccionado
 })
 .then(function(res2) {
   console.log(res2);
+  for (let i = 0; i < res.data.length; i++) {
+    if (capturarID==res.data[i].id){
+      secGenero.innerHTML = `<article>${res.data[i].name}</article>`
+    }
+    
+  }
   for (let i = 0; i < 5; i++) {
-    if (capturarID==res.data[i].id)
-    console.log(res.data[i].name);
     secGenero.innerHTML += ` <a href="./detalleArtista.html?id=${res2.data[i].id}"><article>
     <img class="imagenesDetalleGenero" src="${res2.data[i].picture_medium}" alt="">
           <p class="pSection" >${res2.data[i].name}</p>
