@@ -3,16 +3,7 @@ let qsObj = new URLSearchParams(qs);
 let captura = qsObj.get('id');
 let secCan = document.querySelector('.sectionDetalleCancion')
 console.log(captura);
-/* fetch(`https://api.allorigins.win/raw?url= https://widget.deezer.com/widget/dark/track/${captura}`)
-.then(function(response) {
-  return response.json()
-})
-.then(function(data) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.log("Error: " + error);
-}) */
+
 
 fetch(`https://api.allorigins.win/raw?url= https://api.deezer.com/track/${captura}`)
     .then(function (response) {
