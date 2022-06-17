@@ -1,11 +1,11 @@
-let temasRecuperoStorage = localStorage.getItem('favoritos');
-let favoritos = JSON.parse(temasRecuperoStorage);
+let obtener_localStorage = localStorage.getItem('favoritos');
+let favoritos = JSON.parse(recuperoStorage);
 
 /* capturar el elemento en el dom */;
 
 let section = document.querySelector('.playlist');
 
-let cancionesFavoritos = '';
+let cancionesAgregadas = '';
 
 /* Evaluar el localStorage */
 
@@ -16,20 +16,25 @@ if (favoritos == null || favoritos.length == 0) {
 
     for (let i = 0; i < favoritos.length; i++) {
         /* Buscar el personaje */
-        const URL = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/playlist/908622995${favoritos[i]}`;   
+
+        /* Buscar la cancion */
+        const URL = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${captura}`;   
         
         fetch(URL)
             .then(function(response) {
                 return response.json();
             })
             .then(function(data) {
-                cancionesFavoritos += `<article>
-                                         <p>Nombre de Playlist: ${data.title}</p>
-                                         <img src=${data.image}>
-                                          <a href="/detalle.html?id=${data.id}">Ir a detalle</a>
+                cancionesAgregadas += `<article>                   
+                                        <p>Nombre: ${data.data[i].title}</p>
+                                        <p>Nombre: ${data.data[i].fans}</p>
+                                        <p>Nombre: ${data.data[i].link}</p>
+                                        <p>Nombre: ${data.data[i].share}</p>
+                                        <img src=${data.data[i].picture}>
+                                        <a href="./detalleCancion.html?id=${data.data[i].id}">Ir a detalle Cancion</a>
                                     </article> 
                                     <hr>` 
-            section.innerHTML = cancionesFavoritos;
+            section.innerHTML = cancionesAgregadas;
             }).catch(function(error) {
                 console.log(error);
             })
@@ -37,18 +42,10 @@ if (favoritos == null || favoritos.length == 0) {
 }
 
 
-const url = " https://api.allorigins.win/raw?url=https://api.deezer.com/playlist/908622995"
 
-fetch(url)
-.then(function(response) {
-  return response.json()
-})
-.then(function(data) {
-  console.log(data);
-})
-.catch(function(error) {
-  console.log("Error: " + error);
-})
+
+
+
 
 // js para el formulario 
 

@@ -16,7 +16,7 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${captur
         <article>
                 <ul>
                     <li>ARTISTA:</li>
-                    <a href="./detalleArtista.html?id=${data.artist.id}"><li>${data.artist.name}</li> <br></a>
+                    <a href="./detalleArtista.html?id=${data.artist.id}"><li>${data.artist.name}</li></a>
                     <li>DISCO:</li>
                     <a href="./detalleAlbum.html?id=${data.album.id}"><li>${data.album.title}</li></a>
                 </ul>
@@ -51,3 +51,42 @@ formulario.addEventListener('submit', function (e) {
     this.submit()
  }
 })
+
+
+// favoritos
+/*
+let favoritos = []
+
+let obtener_localStorage = localStorage.getItem("favoritos")
+
+let fav = document.querySelector(".sectionDetalleCancion")
+
+if (favoritos.includes(captura)) {
+
+    fav.innerText = 'Quitar de favoritos'
+    
+}
+console.log(fav);
+
+fav.addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    if (favoritos.includes(captura)) {
+        /* Eliminar un elemento del array */
+/*
+        let agregarCancion = favoritos.indexOf(captura);
+        favoritos.splice(indice, 1);
+        fav.innerText = 'Agregar a Fav';
+    } else {
+        favoritos.push(captura);
+        fav.innerText = 'Quitar de Fav';
+    }
+    /* Subir info al storage */
+/*
+    let favToString= JSON.stringify(favoritos);
+    localStorage.setItem('favoritos', favToString)
+
+
+});
+
+*/
