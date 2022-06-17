@@ -51,5 +51,8 @@ formulario.addEventListener('submit', function (e) {
     this.submit()
  }
 })
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 97cc5e26c0f4ac482a72307d353739ec074f0605
