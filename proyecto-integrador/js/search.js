@@ -3,12 +3,24 @@ let albums = document.querySelector('.alb')
 let canciones = document.querySelector('.can')
 let serRes = document.querySelector('.searchResul')
 let sec  = document.querySelector('.search')
-let esconder = document.querySelectorAll('.sep')
+let esconder = document.querySelector('.invisible')
+let spinner = document.querySelector('.spinner')
+let noData = document.querySelector('.noData')
 let qs = location.search;
 let qsObj = new URLSearchParams(qs);
 let captura = qsObj.get('busqueda')
 
 window.addEventListener('load', function () {
+  esconder.style.display = 'none'
+  setTimeout( function (){
+    esconder.style.display = 'block'
+    spinner.style.display = 'none'
+    if (artistas.style.display == 'none'&&albums.style.display == 'none'&&canciones.style.display == 'none') {
+      noData.style.display = 'block'
+    }
+}, 5000);
+})
+noData.style.display = 'none'
   serRes.innerText =`Resultados de búsqueda para: ${captura}`
   // traemos las canciones
  fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${captura}`)
@@ -65,18 +77,13 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/artist?
       artistas.innerHTML += `<a href="./detalleArtista.html?id=${data.data[i].id}"><p>${data.data[i].name}</p></a>`  
   }
   }
-  if (artistas.style.display == 'none'&&albums.style.display == 'none'&&canciones.style.display == 'none') {
-    alert('no hay resultados coincidentes con el termino buscado')
-  }
+  
 })
 .catch(function(error) {
   console.log("Error: " + error);
 })
 
-  
 
-})
- 
 // js para el formulario 
 
 let formulario = document.querySelector('form.header')
