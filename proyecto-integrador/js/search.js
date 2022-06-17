@@ -10,8 +10,8 @@ let captura = qsObj.get('busqueda')
 
 window.addEventListener('load', function () {
   serRes.innerText =`Resultados de búsqueda para: ${captura}`
-// traemos las canciones
- fetch(`https://api.allorigins.win/raw?url= https://api.deezer.com/search?q=${captura}`)
+  // traemos las canciones
+ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search?q=${captura}`)
 .then(function(response) {
   return response.json()
 })
@@ -31,7 +31,7 @@ window.addEventListener('load', function () {
   console.log("Error: " + error);
 })
 // traemos los albums
-fetch(`https://api.allorigins.win/raw?url= https://api.deezer.com/search/album?q=${captura}`)
+fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/album?q=${captura}`)
 .then(function(response) {
   return response.json()
 })
@@ -51,7 +51,7 @@ fetch(`https://api.allorigins.win/raw?url= https://api.deezer.com/search/album?q
   console.log("Error: " + error);
 })
 // traemos los artistas
-fetch(`https://api.allorigins.win/raw?url= https://api.deezer.com/search/artist?q=${captura}`)
+fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/artist?q=${captura}`)
 .then(function(response) {
   return response.json()
 })
@@ -65,9 +65,6 @@ fetch(`https://api.allorigins.win/raw?url= https://api.deezer.com/search/artist?
       artistas.innerHTML += `<a href="./detalleArtista.html?id=${data.data[i].id}"><p>${data.data[i].name}</p></a>`  
   }
   }
-    
-})
-.then(function(){
   if (artistas.style.display == 'none'&&albums.style.display == 'none'&&canciones.style.display == 'none') {
     alert('no hay resultados coincidentes con el termino buscado')
   }
@@ -75,6 +72,9 @@ fetch(`https://api.allorigins.win/raw?url= https://api.deezer.com/search/artist?
 .catch(function(error) {
   console.log("Error: " + error);
 })
+
+  
+
 })
  
 // js para el formulario 

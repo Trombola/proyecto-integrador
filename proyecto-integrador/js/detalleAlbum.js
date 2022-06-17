@@ -1,10 +1,11 @@
-let sec = document.querySelector('.dalbum');
+window.addEventListener('load', function () {
+    let sec = document.querySelector('.dalbum');
 let qs = location.search;
 let qsObj = new URLSearchParams(qs);
 let captura = qsObj.get('id');
 
 
-fetch(`https://api.allorigins.win/raw?url= https://api.deezer.com/album/${captura}`)
+fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/${captura}`)
     .then(function (response) {
         return response.json();
     })
@@ -54,4 +55,5 @@ formulario.addEventListener('submit', function (e) {
  }else{
     this.submit()
  }
+})
 })

@@ -5,7 +5,7 @@ let secCan = document.querySelector('.sectionDetalleCancion')
 console.log(captura);
 
 
-fetch(`https://api.allorigins.win/raw?url= https://api.deezer.com/track/${captura}`)
+fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${captura}`)
     .then(function (response) {
         return response.json();
     })

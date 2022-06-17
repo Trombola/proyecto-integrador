@@ -5,13 +5,13 @@ let qsObj = new URLSearchParams(qs);
 let captura = qsObj.get('id');
 console.log(captura);
 // obtenemos la informacion del cantante clickeado en la home
-fetch(`https://api.allorigins.win/raw?url= https://api.deezer.com/artist/${captura}`)
+fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${captura}`)
     .then(function (response) {
         return response.json();
     })
     .then(function (data) {
         console.log(data);
-        fetch(`https://api.allorigins.win/raw?url= https://api.deezer.com/artist/${captura}/albums`)
+        fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${captura}/albums`)
             .then(function (response) {
                 return response.json();
             })

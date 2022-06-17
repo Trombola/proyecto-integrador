@@ -3,7 +3,7 @@ let listCanciones = document.querySelector('.lisCan')
 let listAlbums = document.querySelector('.lisAlb')
 let listArtistas = document.querySelector('.lisArt')
 
-fetch('https://api.allorigins.win/raw?url= https://api.deezer.com/chart')
+fetch(' https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart')
     .then(function (response) {
         return response.json();
     })

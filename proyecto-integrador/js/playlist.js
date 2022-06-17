@@ -16,7 +16,7 @@ if (favoritos == null || favoritos.length == 0) {
 
     for (let i = 0; i < favoritos.length; i++) {
         /* Buscar el personaje */
-        const URL = `https://api.allorigins.win/raw?url=https://api.deezer.com/playlist/908622995${favoritos[i]}`;   
+        const URL = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/playlist/908622995${favoritos[i]}`;   
         
         fetch(URL)
             .then(function(response) {
