@@ -1,22 +1,20 @@
-let obtener_localStorage = localStorage.getItem('favoritos');
-let favoritos = JSON.parse(recuperoStorage);
+let section = document.querySelector('.playlist')
 
-/* capturar el elemento en el dom */;
+let favoritos = []
 
-let section = document.querySelector('.playlist');
+localStorage.setItem('favoritos', 'Desesperados')
 
-let cancionesAgregadas = '';
+let obtener_localStorage = localStorage.getItem('favoritos')
 
-/* Evaluar el localStorage */
+let favoritosObtenidos = JSON.parse(obtener_localStorage)
+
 
 if (favoritos == null || favoritos.length == 0) {
-    section.innerHTML = '<p>No hay items en favoritos</p>';
+    section.innerHTML = '<p>No hay canciones en favoritos</p>';
 } else {
-    /* Si contiene elementos */
+    /* Si contiene canciones en favoritos: */
 
     for (let i = 0; i < favoritos.length; i++) {
-        /* Buscar el personaje */
-
         /* Buscar la cancion */
         const URL = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${captura}`;   
         
@@ -25,39 +23,11 @@ if (favoritos == null || favoritos.length == 0) {
                 return response.json();
             })
             .then(function(data) {
-                cancionesAgregadas += `<article>                   
-                                        <p>Nombre: ${data.data[i].title}</p>
-                                        <p>Nombre: ${data.data[i].fans}</p>
-                                        <p>Nombre: ${data.data[i].link}</p>
-                                        <p>Nombre: ${data.data[i].share}</p>
-                                        <img src=${data.data[i].picture}>
-                                        <a href="./detalleCancion.html?id=${data.data[i].id}">Ir a detalle Cancion</a>
-                                    </article> 
-                                    <hr>` 
-            section.innerHTML = cancionesAgregadas;
+                section.innerHTML  += `<article>
+             <p>${localStorage.getItem('favoritos')}</p>
+                                    </article> ` 
             }).catch(function(error) {
                 console.log(error);
             })
     }
 }
-
-
-
-
-
-
-
-// js para el formulario 
-
-let formulario = document.querySelector('form.header')
-let campo = document.querySelector('.campo')
-formulario.addEventListener('submit', function (e) {
- e.preventDefault()
- if(campo.value == ''){
-    alert('el campo esta vacio')
- } else if (campo.value.length<3){
-    alert('el termino buscado debe tener al menos tres caracteres')
- }else{
-    this.submit()
- }
-})
