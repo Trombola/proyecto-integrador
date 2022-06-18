@@ -3,7 +3,7 @@ let listCanciones = document.querySelector('.lisCan')
 let listAlbums = document.querySelector('.lisAlb')
 let listArtistas = document.querySelector('.lisArt')
 
-fetch(' https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart')
+fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart')
     .then(function (response) {
         return response.json();
     })
@@ -18,9 +18,8 @@ fetch(' https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart')
             let id = data.tracks.data[i].id
             listCanciones.innerHTML += `
     <article class="article">
-    <p>${titulo}</p>
-    <p>${nombreArtista}</p>
-    <a href="./detalleCanciones.html?id=${id}"> <img src="${imagenes}" alt='' class='picture'></a>
+    <p><a href="./detalleCanciones.html?id=${id}">${titulo}</a> by <a href="./detalleArtista.html?id=${data.tracks.data[i].artist.id}">${nombreArtista}</a></p>
+    <a href="./detalleCanciones.html?id=${id}" class='aParaResponsive'> <img src="${imagenes}" alt='' class='picture'></a>
     </article>`
         }
         /* Seccion albums */
@@ -32,9 +31,8 @@ fetch(' https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart')
 
             listAlbums.innerHTML += `
         <article class="article">
-        <p>${titulo}</p>
-        <p>${nombreArtista}</p>
-        <a href="./detalleAlbum.html?id=${id}"> <img src="${imagenes}" alt='' class='picture'></a>
+        <p><a href="./detalleAlbum.html?id=${id}">${titulo}</a> by <a href="./detalleArtista.html?id=${data.albums.data[i].artist.id}">${nombreArtista}</a></p>
+        <a href="./detalleAlbum.html?id=${id}" class='aParaResponsive'> <img src="${imagenes}" alt='' class='picture'></a>
         </article>`
         }
         // Seccion artistas
@@ -45,7 +43,7 @@ fetch(' https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart')
             listArtistas.innerHTML += `
         <article class="article">
         <p>${nombreArtista}</p>
-        <a href="./detalleArtista.html?id=${id}"> <img src="${imagenes}" alt='' class='picture'></a>
+        <a href="./detalleArtista.html?id=${id}" class='aParaResponsive'> <img src="${imagenes}" alt='' class='picture'></a>
         </article>`
         }
     })

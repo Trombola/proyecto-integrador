@@ -20,7 +20,7 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${captu
         
             for (let i = 0; i < 5; i++) {
                 guardarDatos += `<a href="./detalleAlbum.html?id=${data2.data[i].id}">
-                <li>${data2.data[i].title}</li></a>`
+                <li>${data2.data[i].title}</li><img src="${data2.data[i].cover}" alt="" class='imgAlbumDetalleArtista'></a>`
                 }          
 
                 console.log(guardarDatos);
@@ -28,11 +28,11 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${captu
                 sec.innerHTML = `
             <article class='art'>    
                 <h1>${data.name}</h1>
-                <img src="${data.picture}" alt="">
+                <img src="${data.picture}" alt="" class='imgArtista'>
             </article>
-            <article class='art'>
+            <article class='art dArtistaResponsiveArticulos'>
                 <h3>Albums:</h3>
-                <ul>
+                <ul class='listadoAlbums'>
                     ${guardarDatos}
                 </ul>
             </article>`
