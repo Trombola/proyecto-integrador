@@ -12,7 +12,8 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${captur
     .then(function (data) {
         console.log(data);
 
-        secCan.innerHTML = `<h1>${data.title}</h1>
+        secCan.innerHTML = `
+        <h1>${data.title}</h1>
         <article>
                 <ul>
                     <li>ARTISTA:</li>
@@ -23,11 +24,11 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${captur
         </article>
         <article>
                 <img src="${data.album.cover}" alt="">
-            </article>
-            <article>
+        </article>
+        <article>
             <iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/track/${captura}" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
-            </article>`
-       
+        </article>`
+
     })
     .catch(function (errores) {
         console.log(errores);
@@ -39,14 +40,14 @@ let favoritos = []
 let recuperoStorage = localStorage.getItem('favoritos')
 /* Si habian datos en el localStorage hacemos que favoritos tome 
 ese valor transformado de string a objeto literal */
-if(recuperoStorage != null){
+if (recuperoStorage != null) {
     favoritos = JSON.parse(recuperoStorage)
 }
 // capturamos el boton
 let btnFav = document.querySelector('.btnPlaylist')
 /* si la cancion ya se encontraba en la playlist hacemos
 que el boton cambie el innerText para avisar al usuario */
-if(favoritos.includes(captura)){
+if (favoritos.includes(captura)) {
     btnFav.innerText = 'Eliminar de playlist'
 }
 /* Luego de los validadores queremos que cuando el usuario 
@@ -56,7 +57,7 @@ btnFav.addEventListener('click', function () {
     el local storage y aprieta el boton 
     queremos que este elimine el id y que se 
     cambie el texto del boton */
-    if(favoritos.includes(captura)){
+    if (favoritos.includes(captura)) {
         let indice = favoritos.indexOf(captura);
         favoritos.splice(indice, 1);
         btnFav.innerText = 'AGREGAR A MI PLAYLIST';
@@ -64,7 +65,7 @@ btnFav.addEventListener('click', function () {
         favoritos.push(captura);
         btnFav.innerText = 'Eliminar de playlist';
     }
-    let playlistString= JSON.stringify(favoritos);
+    let playlistString = JSON.stringify(favoritos);
     localStorage.setItem('favoritos', playlistString)
 })
 

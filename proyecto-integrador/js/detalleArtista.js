@@ -17,11 +17,11 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${captu
             })
             .then(function (data2) {
                 console.log(data2);
-        
-            for (let i = 0; i < 5; i++) {
-                guardarDatos += `<a href="./detalleAlbum.html?id=${data2.data[i].id}">
-                <li>${data2.data[i].title}</li><img src="${data2.data[i].cover}" alt="" class='imgAlbumDetalleArtista'></a>`
-                }          
+
+                for (let i = 0; i < 5; i++) {
+                    guardarDatos += `<a href="./detalleAlbum.html?id=${data2.data[i].id}">
+                <li>${data2.data[i].title}</li></a>`
+                }
 
                 console.log(guardarDatos);
 
@@ -53,12 +53,12 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${captu
 let formulario = document.querySelector('form.header')
 let campo = document.querySelector('.campo')
 formulario.addEventListener('submit', function (e) {
- e.preventDefault()
- if(campo.value == ''){
-    alert('el campo esta vacio')
- } else if (campo.value.length<3){
-    alert('el termino buscado debe tener al menos tres caracteres')
- }else{
-    this.submit()
- }
+    e.preventDefault()
+    if (campo.value == '') {
+        alert('el campo esta vacio')
+    } else if (campo.value.length < 3) {
+        alert('el termino buscado debe tener al menos tres caracteres')
+    } else {
+        this.submit()
+    }
 })

@@ -1,22 +1,22 @@
 window.addEventListener('load', function () {
     let sec = document.querySelector('.dalbum');
-let qs = location.search;
-let qsObj = new URLSearchParams(qs);
-let captura = qsObj.get('id');
+    let qs = location.search;
+    let qsObj = new URLSearchParams(qs);
+    let captura = qsObj.get('id');
 
 
-fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/${captura}`)
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-        console.log(data);
-        let listaCanciones = ''
-        
-        for (let i = 0; i < data.tracks.data.length; i++) {
-           listaCanciones += `<a class="aGeneros" href="./detalleCanciones.html?id=${data.tracks.data[i].id}"><li>${data.tracks.data[i].title}</li></a>`
-        }
-        sec.innerHTML = `
+    fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/${captura}`)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
+            let listaCanciones = ''
+
+            for (let i = 0; i < data.tracks.data.length; i++) {
+                listaCanciones += `<a class="aGeneros" href="./detalleCanciones.html?id=${data.tracks.data[i].id}"><li>${data.tracks.data[i].title}</li></a>`
+            }
+            sec.innerHTML = `
             <article>
                 <h1 class="titulo">${data.title}</h1>
                 <img class="dalbum" src="${data.cover}" alt="">
@@ -37,23 +37,23 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/album/${captur
                     ${listaCanciones}
                 </ul>
             </article>`
-    })
-    .catch(function (errores) {
-        console.log(errores);
-    })
+        })
+        .catch(function (errores) {
+            console.log(errores);
+        })
 
-// js para el formulario 
+    // js para el formulario 
 
-let formulario = document.querySelector('form.header')
-let campo = document.querySelector('.campo')
-formulario.addEventListener('submit', function (e) {
- e.preventDefault()
- if(campo.value == ''){
-    alert('el campo esta vacio')
- } else if (campo.value.length<3){
-    alert('el termino buscado debe tener al menos tres caracteres')
- }else{
-    this.submit()
- }
-})
+    let formulario = document.querySelector('form.header')
+    let campo = document.querySelector('.campo')
+    formulario.addEventListener('submit', function (e) {
+        e.preventDefault()
+        if (campo.value == '') {
+            alert('el campo esta vacio')
+        } else if (campo.value.length < 3) {
+            alert('el termino buscado debe tener al menos tres caracteres')
+        } else {
+            this.submit()
+        }
+    })
 })

@@ -1,21 +1,33 @@
 /* Reglas css generales */
-* {box-sizing: border-box;}
+* {
+    box-sizing: border-box;
+}
 
-* {font-family: 'Roboto Slab', serif;}
+* {
+    font-family: 'Roboto Slab', serif;
+}
 
 body {
-    background-image: url(../img/fondo-naranja.jpeg); 
-    margin: 15px 50px 15px 50px; 
-    display: flex; 
+    background-image: url(../img/fondo-naranja.jpeg);
+    margin: 15px 50px 15px 50px;
+    display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-ul,ol {padding: 0;}
+ul,
+ol {
+    padding: 0;
+}
 
-li {list-style-type: none;}
+li {
+    list-style-type: none;
+}
 
-a {text-decoration: none; color: #000;}
+a {
+    text-decoration: none;
+    color: #000;
+}
 
 /* Diseño para computadora */
 
@@ -26,7 +38,7 @@ header.header {
     justify-content: space-between;
 }
 
-nav.nav{
+nav.nav {
     display: flex;
     align-items: flex-start;
 }
@@ -39,7 +51,7 @@ a.navbar {
     padding: 10px;
 }
 
-img.header{
+img.header {
     width: 80px;
 }
 
@@ -57,34 +69,40 @@ ul.footer {
     justify-content: space-around;
     color: white;
 }
+
 /* Spinner search */
-.spinnerPadre{
+.spinnerPadre {
     display: flex;
     justify-content: center;
 }
-.spinner{
+
+.spinner {
     border: 4px solid chocolate;
     width: 400px;
     height: 400px;
     border-radius: 50%;
     border-left-color: black;
     animation: spinnerA 1s linear infinite;
-    
+
 }
+
 @keyframes spinnerA {
-    0%{
+    0% {
         transform: rotate(0deg);
     }
-    100%{
+
+    100% {
         transform: rotate(360deg);
     }
 }
+
 /*home*/
 
-.lisStyle{
+.lisStyle {
     display: flex;
 }
-.article{
+
+.article {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -92,37 +110,33 @@ ul.footer {
     margin: 0px 10px 0px 10px;
     height: 300px;
     width: 300px;
-    color: white; 
+    color: white;
 }
 
-.picture{
+.picture {
     width: 180px;
     height: 180px;
 }
 
 
 /*detalle Artista*/
-.dArtista{
+.dArtista {
     display: flex;
     justify-content: space-evenly;
 }
-.art{
+
+.art {
     align-items: center;
     align-content: center;
     width: 500px;
     height: 400px;
 }
 
-.listadoAlbums{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-.imgArtista{
+.imgArtista {
     width: 400px;
     height: 400px;
 }
+
 /*generos*/
 .tituloGeneros {
     display: flex;
@@ -238,11 +252,14 @@ i.playlist1 {
 
 /*Search*/
 
-.search{
+.search {
     display: flex;
     justify-content: space-around;
 }
-.arti,.alb,.can{
+
+.arti,
+.alb,
+.can {
     display: flex;
     flex-direction: column;
 }
@@ -252,8 +269,12 @@ i.playlist1 {
 
 /*Diseño para mobile*/
 @media (max-width: 420px) {
+
     /* Reglas generales */
-    body {margin: 5px 20px 0px 20px;}
+    body {
+        margin: 5px 20px 0px 20px;
+    }
+
     /*Header*/
     header.header {
         display: flex;
@@ -282,11 +303,13 @@ i.playlist1 {
         height: 10vh;
         width: 10vh;
     }
-    a.navbar{
+
+    a.navbar {
         font-size: 20px;
         padding: 10px;
         margin: 0px;
     }
+
     /*footer*/
     ul.footer {
         display: flex;
@@ -429,7 +452,7 @@ i.playlist1 {
     }
 
     /*Search responsive*/
-    
+
 
     /*Detalle album responsive*/
     section.dalbum {
@@ -443,58 +466,56 @@ i.playlist1 {
     }
 
     /*home responsive*/
-    .lisStyle{
+    .lisStyle {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
-    .article{
+
+    .article {
         flex-direction: row;
         margin: 20px 0px;
         height: 100px;
         width: 200px;
         justify-content: space-between;
     }
-    .aParaResponsive{
+
+    .aParaResponsive {
         order: -1;
     }
-    .picture{
+
+    .picture {
         width: 100px;
         height: 100px;
         margin-right: 10px;
     }
 
     /*detalle artista responsive*/
-    .dArtista{
+    .dArtista {
         display: flex;
         flex-direction: column;
     }
-    .art{
+
+    .art {
         width: 380px;
-        height: 200px;
+        height: 300px;
         align-items: center;
     }
-    .imgAlbumDetalleArtista{
-        height: 100px;
-        width: 100px;
+
+    .imgArtista {
+        width: 200px;
+        height: 200px;
     }
-    .listadoAlbums{
-        display: flex;
-    }
-    
-    .imgArtista{
-        width: 100px;
+
+    .dArtistaResponsiveArticulos {
         height: 100px;
     }
-    .dArtistaResponsiveArticulos{
-        height: 300px;
-    }
-    
+
 }
 
 
-.pSection{
+.pSection {
     display: flex;
     justify-content: space-around;
 }
