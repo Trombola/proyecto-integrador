@@ -1,38 +1,26 @@
-<<<<<<< HEAD
 let section = document.querySelector('.playlist')
+let recuperoStorage = localStorage.getItem('favoritos')
+let canciones = JSON.parse(recuperoStorage)
 
-let favoritos = []
-
-localStorage.setItem('favoritos', 'Desesperados')
-
-let obtener_localStorage = localStorage.getItem('favoritos')
-
-let favoritosObtenidos = JSON.parse(obtener_localStorage)
-
-
-if (favoritos == null || favoritos.length == 0) {
-    section.innerHTML = '<p>No hay canciones en favoritos</p>';
-} else {
-    /* Si contiene canciones en favoritos: */
-
-    for (let i = 0; i < favoritos.length; i++) {
-        /* Buscar la cancion */
-        const URL = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${captura}`;   
+if (canciones.length == 0) {
+    section.innerHTML = '<p>no hay canciones en la playlist</p>'
+} else{
+    for (let i = 0; i < canciones.length; i++) {
+        fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${canciones[i]}`)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
+            section.innerHTML += `<h1>${data.title}</h1>`
+        })
+        .catch(function (errores) {
+            console.log(errores);
+        })
         
-        fetch(URL)
-            .then(function(response) {
-                return response.json();
-            })
-            .then(function(data) {
-                section.innerHTML  += `<article>
-             <p>${localStorage.getItem('favoritos')}</p>
-                                    </article> ` 
-            }).catch(function(error) {
-                console.log(error);
-            })
     }
 }
-=======
+
 // js para el formulario 
 
 let formulario = document.querySelector('form.header')
@@ -47,4 +35,3 @@ formulario.addEventListener('submit', function (e) {
     this.submit()
  }
 })
->>>>>>> 97cc5e26c0f4ac482a72307d353739ec074f0605
