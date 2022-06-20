@@ -112,6 +112,12 @@ ul.footer {
     height: 400px;
 }
 
+.listadoAlbumsDetalleArtista{
+    height: 100%;
+    overflow-y: scroll;
+}
+
+
 /*generos*/
 .tituloGeneros {
     display: flex;
@@ -150,10 +156,9 @@ a.borde {
 .sectionGeneros {
     display: flex;
     align-items: center;
-    justify-content: center;
+    width: 100%;
+    overflow-x: scroll;
 }
-
-
 
 /*detalle del genero*/
 .tituloDetalleGenero {
@@ -261,6 +266,21 @@ article.play{
 
 /*Detalle album*/
 
+.dalbum{
+    display: flex;
+    height: auto;
+}
+
+.articleDetalleAlbum, .articleDetalleAlbum1{
+    width: 50%;
+    font-size: 20px;
+    height: 50vh;
+}
+
+.listaCancionesDetalleAlbum{
+    height: 100%;
+    overflow-y: scroll;
+}
 
 /*Diseño para mobile*/
 @media (max-width: 420px) {

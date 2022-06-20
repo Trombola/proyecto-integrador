@@ -14,7 +14,7 @@ fetch(url)
 
   let section = document.querySelector('.sectionGeneros')
   
-  for (let i = 1; i < 5; i++) {
+  for (let i = 1; i < generos.length; i++) {
     section.innerHTML +=  `<article>
     <a class="aGeneros" href="./detalleGeneros.html?id=${generos[i].id}">
     <img class="imagenesGenero" src="${generos[i].picture_medium}"

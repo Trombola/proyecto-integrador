@@ -17,11 +17,10 @@ window.addEventListener('load', function () {
                 listaCanciones += `<a class="aGeneros" href="./detalleCanciones.html?id=${data.tracks.data[i].id}"><li>${data.tracks.data[i].title}</li></a>`
             }
             sec.innerHTML = `
-            <article>
+            <article class='articleDetalleAlbum'>
                 <h1 class="titulo">${data.title}</h1>
                 <img class="dalbum" src="${data.cover}" alt="">
-            </article>
-            <article>
+
                 <h3>ARTISTA:</h3>
                 <a href="./detalleArtista.html?id=${data.artist.id}"><p class='estreno'>${data.artist.name}</p></a>
 
@@ -31,9 +30,9 @@ window.addEventListener('load', function () {
                 <h3>FECHA DE PUBLICACION:</h3>
                 <p class='rating'>${data.release_date} </p>
             </article>
-            <article>
+            <article class='articleDetalleAlbum1'>
                 <h3>CANCIONES DEL ALBUM:</h3>
-                <ul>
+                <ul class='listaCancionesDetalleAlbum'>
                     ${listaCanciones}
                 </ul>
             </article>`
