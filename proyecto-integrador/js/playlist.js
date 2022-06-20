@@ -12,18 +12,20 @@ if (canciones.length == 0) {
             })
             .then(function (data) {
                 console.log(data);
-                section.innerHTML += `<article>
-            <h1>${data.title} </h1>  
-          
-            <ul>
-            <li>ARTISTA:</li>
-            <a href="./detalleArtista.html?id=${data.artist.id}"><li>${data.artist.name}</li></a>
-          </ul>
-         <img src="${data.album.cover}" alt="">
-            
-           
-
-         </article>`
+                section.innerHTML += `
+            <article class='play'>
+                <div>
+                    <h2><a href="./detalleCanciones.html?id=${data.id}">${data.title}</a></h2>  
+                    <ul>
+                        <li>ARTISTA:</li>
+                        <a href="./detalleArtista.html?id=${data.artist.id}"><li>${data.artist.name}</li></a>
+                    </ul>
+                    <img src="${data.album.cover}" alt="">
+                </div>
+                <div>
+                    <iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/track/${data.id}" width="80%" height="200px" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
+                </div>
+            </article>`
 
             })
             .catch(function (errores) {

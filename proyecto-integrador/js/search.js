@@ -4,7 +4,7 @@ let canciones = document.querySelector('.can')
 let serRes = document.querySelector('.searchResul')
 let sec  = document.querySelector('.search')
 let esconder = document.querySelector('.invisible')
-let spinner = document.querySelector('.spinner')
+let animacionDeCarga = document.querySelector('.animacionDeCarga')
 let noData = document.querySelector('.noData')
 let qs = location.search;
 let qsObj = new URLSearchParams(qs);
@@ -14,7 +14,7 @@ window.addEventListener('load', function () {
   esconder.style.display = 'none'
   setTimeout( function (){
     esconder.style.display = 'block'
-    spinner.style.display = 'none'
+    animacionDeCarga.style.display = 'none'
     if (artistas.style.display == 'none'&&albums.style.display == 'none'&&canciones.style.display == 'none') {
       noData.style.display = 'block'
     }

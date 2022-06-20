@@ -1,9 +1,11 @@
 let qs = location.search;
 let qsObj = new URLSearchParams(qs);
 let captura = qsObj.get('id');
-let secCan = document.querySelector('.sectionDetalleCancion')
-console.log(captura);
 
+// capturando elementos del dom
+
+let hacheUno = document.querySelector('.tituloDetalleCancion')
+let articulo = document.querySelector('.articleDetalleCancion')
 
 fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${captura}`)
     .then(function (response) {
@@ -11,23 +13,18 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${captur
     })
     .then(function (data) {
         console.log(data);
-
-        secCan.innerHTML = `
-        <h1>${data.title}</h1>
-        <article>
-                <ul>
+        hacheUno.innerText = data.title
+        articulo.innerHTML += `
+                <ul class='listDetalleCancion'>
                     <li>ARTISTA:</li>
-                    <a href="./detalleArtista.html?id=${data.artist.id}"><li>${data.artist.name}</li></a>
+                    <li><a href="./detalleArtista.html?id=${data.artist.id}">${data.artist.name}</a></li>
+                    <br>
                     <li>DISCO:</li>
-                    <a href="./detalleAlbum.html?id=${data.album.id}"><li>${data.album.title}</li></a>
+                    <li><a href="./detalleAlbum.html?id=${data.album.id}">${data.album.title}</a></li>
+                    <br>
+                    <li><img src="${data.album.cover}" alt=""></li>
                 </ul>
-        </article>
-        <article>
-                <img src="${data.album.cover}" alt="">
-        </article>
-        <article>
-            <iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/track/${captura}" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
-        </article>`
+                <iframe class='playerDetalleCancion' title="deezer-widget" src="https://widget.deezer.com/widget/dark/track/${captura}" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>`
 
     })
     .catch(function (errores) {
@@ -68,6 +65,7 @@ btnFav.addEventListener('click', function () {
     let playlistString = JSON.stringify(favoritos);
     localStorage.setItem('favoritos', playlistString)
 })
+
 
 // js para el formulario 
 

@@ -17,12 +17,12 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart')
             let imagenes = data.tracks.data[i].artist.picture
             let id = data.tracks.data[i].id
             listCanciones.innerHTML += `
-                <article class="article">
+                <li class="article">
                     <p>
                         <a href="./detalleCanciones.html?id=${id}">${titulo}</a> by <a href="./detalleArtista.html?id=${data.tracks.data[i].artist.id}">${nombreArtista}</a>
                     </p>
                     <a href="./detalleCanciones.html?id=${id}" class='aParaResponsive'> <img src="${imagenes}" alt='' class='picture'></a>
-                </article>`
+                </li>`
         }
         /* Seccion albums */
         for (let i = 0; i < 5; i++) {
@@ -31,12 +31,12 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart')
             let imagenes = data.albums.data[i].cover;
             let id = data.albums.data[i].id;
             listAlbums.innerHTML += `
-                <article class="article">
+                <li class="article">
                     <p>
                         <a href="./detalleAlbum.html?id=${id}">${titulo}</a> by <a href="./detalleArtista.html?id=${data.albums.data[i].artist.id}">${nombreArtista}</a>
                     </p>
                     <a href="./detalleAlbum.html?id=${id}" class='aParaResponsive'> <img src="${imagenes}" alt='' class='picture'></a>
-                </article>`
+                </li>`
         }
         // Seccion artistas
         for (let i = 0; i < 5; i++) {
@@ -44,10 +44,10 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart')
             let imagenes = data.artists.data[i].picture
             let id = data.artists.data[i].id
             listArtistas.innerHTML += `
-                <article class="article">
+                <li class="article">
                     <p>${nombreArtista}</p>
                     <a href="./detalleArtista.html?id=${id}" class='aParaResponsive'> <img src="${imagenes}" alt='' class='picture'></a>
-                </article>`
+                </li>`
         }
     })
     .catch(function (errores) {
