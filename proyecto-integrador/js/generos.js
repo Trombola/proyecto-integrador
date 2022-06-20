@@ -7,19 +7,15 @@ fetch(url)
 .then(function(data) {
 
   let generos = data.data
-  console.log(generos);
-  console.log(data);
-
-  let guardarDatinis = ''
 
   let section = document.querySelector('.sectionGeneros')
   
   for (let i = 1; i < generos.length; i++) {
-    section.innerHTML +=  `<article>
+    section.innerHTML +=  `<article class='articleDetalleGenero'>
     <a class="aGeneros" href="./detalleGeneros.html?id=${generos[i].id}">
     <img class="imagenesGenero" src="${generos[i].picture_medium}"
           alt=""></a>
-          <p class="pSection" >${generos[i].name}</p>
+          <p class="pGenero" >${generos[i].name}</p>
  </article>`
 
     

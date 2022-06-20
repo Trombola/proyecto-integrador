@@ -22,8 +22,8 @@ if (canciones.length == 0) {
                     </ul>
                     <img src="${data.album.cover}" alt="">
                 </div>
-                <div>
-                    <iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/track/${data.id}" width="80%" height="200px" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
+                <div class='divPlayerPlaylist'>
+                    <iframe class='playerPlaylist' title="deezer-widget" src="https://widget.deezer.com/widget/dark/track/${data.id}" width="80%" height="200px" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
                 </div>
             </article>`
 

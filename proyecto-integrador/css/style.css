@@ -12,7 +12,7 @@ body {
     margin: 15px 50px 15px 50px;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 95vh;
 }
 
 ul,
@@ -112,45 +112,19 @@ ul.footer {
     height: 400px;
 }
 
-.listadoAlbumsDetalleArtista{
+.listadoAlbumsDetalleArtista {
     height: 100%;
     overflow-y: scroll;
 }
 
 
 /*generos*/
-.tituloGeneros {
-    display: flex;
-    justify-content: center;
-    color: darkred;
-    font-size: 35px;
-}
+
 
 .imagenesGenero {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
     margin: 20px;
     width: 300px;
 
-}
-
-nav.navGeneros {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-}
-
-a.borde {
-    display: flex;
-    background-color: brown;
-    margin: 20px;
-    text-decoration: none;
-    color: white;
-    width: 180px;
-    height: 50px;
-    align-items: center;
-    justify-content: center;
 }
 
 .sectionGeneros {
@@ -161,66 +135,46 @@ a.borde {
 }
 
 /*detalle del genero*/
-.tituloDetalleGenero {
-    display: flex;
-    justify-content: center;
-    font-size: 35px;
-    color: darkred;
-}
-
-.subtituloDetalleGenero {
-    display: flex;
-    justify-content: center;
-    color: darkred;
-}
-
-section.detalleGeneros {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
 
 .imagenesDetalleGenero {
+    margin: 20px;
+    width: 300px;
+
+}
+
+.detalleGeneros {
     display: flex;
-    flex-direction: row;
-    width: 250px;
+    align-items: center;
+    width: 100%;
+    overflow-x: scroll;
 }
-
-article.artDetalleGenero {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-p.artistasDetalleGenero {
-    display: none;
-}
-
-
 
 /*Playlist*/
-section.playlist{
+section.playlist {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 50vh;
+    overflow-y: scroll;
 }
-article.play{
+
+article.play {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 60%;
+    width: 50%;
     margin-bottom: 10px;
 }
 
 
 /*Detalle cancion*/
 
-.sectionDetalleCancion{
+.sectionDetalleCancion {
     display: flex;
     justify-content: space-between;
 }
 
-.articleDetalleCancion{
+.articleDetalleCancion {
     display: flex;
     width: 70%;
     height: 100%;
@@ -228,17 +182,19 @@ article.play{
     align-items: center;
 }
 
-.listDetalleCancion{
+.listDetalleCancion {
     width: 50%;
     font-size: 20px;
 }
-.articleDetalleCancion1{
+
+.articleDetalleCancion1 {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.boton{
+
+.boton {
     background-color: white;
     height: 150px;
     width: 200px;
@@ -252,32 +208,47 @@ article.play{
     justify-content: space-around;
 }
 
-.arti,
-.alb,
-.can {
+.arti, .alb, .can {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    width: 33%;
+}
+
+.arti2, .alb2, .can2 {
+    overflow-y: scroll;
+}
+
+.aSearch{
     display: flex;
     flex-direction: column;
 }
 
-.animacionDeCarga{
+.imagenesSearch{
+    height: 150px;
+    width: 150px;
+}
+
+.animacionDeCarga {
     display: flex;
     justify-content: center;
 }
 
 /*Detalle album*/
 
-.dalbum{
+.dalbum {
     display: flex;
     height: auto;
 }
 
-.articleDetalleAlbum, .articleDetalleAlbum1{
+.articleDetalleAlbum,
+.articleDetalleAlbum1 {
     width: 50%;
     font-size: 20px;
     height: 50vh;
 }
 
-.listaCancionesDetalleAlbum{
+.listaCancionesDetalleAlbum {
     height: 100%;
     overflow-y: scroll;
 }
@@ -332,13 +303,9 @@ article.play{
     }
 
     /*genero*/
-    .tituloGeneros {
+    .articleDetalleGenero {
         display: flex;
-        justify-content: center;
-    }
-
-    nav.navGeneros {
-        display: none;
+        flex-direction: column;
     }
 
     .imagenesGenero {
@@ -346,68 +313,47 @@ article.play{
         flex-direction: column;
         justify-content: space-around;
         margin: 20px;
-        width: 250px;
-        height: 250px;
-
+        width: 150px;
+        height: 150px;
     }
 
     .sectionGeneros {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        height: 50vh;
+        overflow-y: scroll;
+    }
+
+    .pGenero {
+        order: -1;
     }
 
     /*detalle del genero*/
 
-    .tituloDetalleGenero {
-        display: flex;
-        justify-content: center;
-        font-size: 35px;
-        color: darkred;
-    }
-
-    .subtituloDetalleGenero {
-        display: flex;
-        justify-content: center;
-        color: darkred;
-    }
-
-    section.detalleGeneros {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
     .imagenesDetalleGenero {
+        margin: 20px;
+        width: 150px;
+        height: 150px;
+    
+    }
+    
+    .detalleGeneros {
         display: flex;
         flex-direction: column;
-        width: 250px;
-        margin: 20px;
-    }
-
-    article.artDetalleGenero {
-        display: none;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
-    p.artistasDetalleGenero {
-        display: flex;
-        justify-content: center;
-        justify-items: center;
+        align-items: center;
+        height: 40vh;
+        overflow-y: scroll;
     }
 
     /*Detalle cancion*/
-    .sectionDetalleCancion{
+    .sectionDetalleCancion {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
     }
-    
-    .articleDetalleCancion{
+
+    .articleDetalleCancion {
         display: flex;
         width: 100%;
         height: 50%;
@@ -415,59 +361,69 @@ article.play{
         align-items: center;
         margin-bottom: 40px;
     }
-    
-    .listDetalleCancion{
+
+    .listDetalleCancion {
         width: 40%;
         font-size: 15px;
     }
-    .playerDetalleCancion{
+
+    .playerDetalleCancion {
         margin-left: 10px;
         height: 200px;
         width: 60%;
     }
-    .articleDetalleCancion1{
+
+    .articleDetalleCancion1 {
         display: flex;
         flex-direction: row;
         width: 100%;
         justify-content: space-evenly;
     }
-    .boton{
+
+    .boton {
         background-color: white;
         height: auto;
         width: auto;
         margin-bottom: 10px;
     }
 
-
-
-
     /*Playlist*/
-    article.playlist {
+    section.playlist {
         display: flex;
         flex-direction: column;
+        width: 100%;
     }
-
-    img.playlist {
-        width: 150px;
-        height: 112px;
-    }
-
-    /*Detalle cancion*/
     
+    article.play {
+        width: 100%;
+    }
+
+    .divPlayerPlaylist{
+        display: flex;
+        justify-content: flex-end;
+    }
 
     /*Search responsive*/
 
+    .imagenesSearch{
+        height: 100px;
+        width: 100px;
+    }
 
+    .search{
+        font-size: 15px;
+    }
     /*Detalle album responsive*/
-    section.dalbum {
+    .dalbum {
         display: flex;
-        flex-direction: column;
+        height: auto;
     }
 
-    img.dalbum {
-        width: 200px;
-        height: 150px;
+    .articleDetalleAlbum,
+    .articleDetalleAlbum1 {
+        font-size: 15px;
     }
+
 
     /*home responsive*/
     .lisStyle {
@@ -503,19 +459,22 @@ article.play{
 
     .art {
         width: 380px;
-        height: 300px;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
 
     .imgArtista {
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
     }
 
     .dArtistaResponsiveArticulos {
-        height: 100px;
+        height: 240px;
+        overflow-y: hidden;
     }
 
+
 }
-
-
