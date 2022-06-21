@@ -208,23 +208,27 @@ article.play {
     justify-content: space-around;
 }
 
-.arti, .alb, .can {
+.arti,
+.alb,
+.can {
     display: flex;
     flex-direction: column;
     height: 50vh;
     width: 33%;
 }
 
-.arti2, .alb2, .can2 {
+.arti2,
+.alb2,
+.can2 {
     overflow-y: scroll;
 }
 
-.aSearch{
+.aSearch {
     display: flex;
     flex-direction: column;
 }
 
-.imagenesSearch{
+.imagenesSearch {
     height: 150px;
     width: 150px;
 }
@@ -334,9 +338,9 @@ article.play {
         margin: 20px;
         width: 150px;
         height: 150px;
-    
+
     }
-    
+
     .detalleGeneros {
         display: flex;
         flex-direction: column;
@@ -393,26 +397,27 @@ article.play {
         flex-direction: column;
         width: 100%;
     }
-    
+
     article.play {
         width: 100%;
     }
 
-    .divPlayerPlaylist{
+    .divPlayerPlaylist {
         display: flex;
         justify-content: flex-end;
     }
 
     /*Search responsive*/
 
-    .imagenesSearch{
+    .imagenesSearch {
         height: 100px;
         width: 100px;
     }
 
-    .search{
+    .search {
         font-size: 15px;
     }
+
     /*Detalle album responsive*/
     .dalbum {
         display: flex;
@@ -475,6 +480,4 @@ article.play {
         height: 240px;
         overflow-y: hidden;
     }
-
-
 }

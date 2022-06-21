@@ -1,21 +1,36 @@
 //js de la pagina
+//obtenemos los elementos del dom
+//document es un objeto literal que representa el html cargado
+// Utilizamos un selector, querySelector(), que recibe un string indicando el elemento a capturar.
 let listCanciones = document.querySelector('.lisCan')
 let listAlbums = document.querySelector('.lisAlb')
 let listArtistas = document.querySelector('.lisArt')
 
+//Utilizamos el metodo fetch que recibe como parametro la URL a la API, tambien conocido como endpoint
 fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart')
+     /* Luego utilizamos el metodo .then() que tiene un callback 
+     que tiene como parametro la respuesta del fetch que es un metodo asincronico* 
+     por lo que nuestro codigo sigue funcionando*/
     .then(function (response) {
+        /* Utilizando el metodo .json() convertimos la respuesta en un objeto literal */
         return response.json();
     })
+    /* El segundo metodo .then() recibe como parametro un callback que tiene como 
+    parametro el la informacion obtenida en el primer .then()*/
     .then(function (data) {
+    /* Dentro de esta funcion ya podemos trabajar con los datos provistos por la API */
         console.log(data);
-        console.log(data.artists.data[0].id);
         /* Seccion de las canciones */
-        for (let i = 5; i < 10; i++) {
+        /* utilizamos un ciclo for para recorrer el array que tiene las canciones */
+        for (let i = 5 /* inicio */; i < 10 /* condicion */; i++ /* modificador */) {
+            /* Asignamos un valor de la API a una variable para mostrarlo */
             let titulo = data.tracks.data[i].title
             let nombreArtista = data.tracks.data[i].artist.name
             let imagenes = data.tracks.data[i].artist.picture
             let id = data.tracks.data[i].id
+            /* Modificaremos un elemento del DOM utilizando el .innerHTML
+            Ademas usaremos las template strings para poder utilizar los
+            datos asignado a las variables previamente */
             listCanciones.innerHTML += `
                 <li class="article">
                     <p>
@@ -25,6 +40,7 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart')
                 </li>`
         }
         /* Seccion albums */
+        
         for (let i = 0; i < 5; i++) {
             let titulo = data.albums.data[i].title;
             let nombreArtista = data.albums.data[i].artist.name;
@@ -50,21 +66,30 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart')
                 </li>`
         }
     })
+    /* Finalmente utilizamos el metodo .catch() el cual
+    atrapa los errores en cualquier instancia del fetch, este tiene un callback
+    que recibe como parametro el error */
     .catch(function (errores) {
         console.log(errores);
     })
 
 // js para el formulario 
-
+// capturamos elementos del dom
 let formulario = document.querySelector('form.header')
 let campo = document.querySelector('.campo')
-formulario.addEventListener('submit', function (e) {
+/* En este caso estamos esperando a que suceda algo con el formulario
+El addEventListener es una funcion nativa del javaScript, esta recibe como parametros
+el evento y luego un callback que tiene como parametro el evento sucedido */
+formulario.addEventListener('submit', function (e){
+/* Dentro del call back podemos utilizar la funcion .preventDefault() para evitar
+comportamientos nativos del elemento HTML */
  e.preventDefault()
+ /* Utilizamos validadores para asegurarnos que se cumplan ciertas condiciones */
  if(campo.value == ''){
     alert('el campo esta vacio')
  } else if (campo.value.length<3){
     alert('el termino buscado debe tener al menos tres caracteres')
  }else{
-    this.submit()
+    this.submit()   /* Si no existen errores enviamos el formulario con el metodo .submit() */
  }
 })
