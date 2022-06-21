@@ -33,6 +33,7 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${captur
 
 // js para agregar a la playlist
 let favoritos = []
+
 // recuperamos los datos del local storage
 let recuperoStorage = localStorage.getItem('favoritos')
 /* Si habian datos en el localStorage hacemos que favoritos tome 
@@ -42,18 +43,14 @@ if (recuperoStorage != null) {
 }
 // capturamos el boton
 let btnFav = document.querySelector('.btnPlaylist')
-/* si la cancion ya se encontraba en la playlist hacemos
-que el boton cambie el innerText para avisar al usuario */
+
 if (favoritos.includes(captura)) {
     btnFav.innerText = 'Eliminar de playlist'
 }
 /* Luego de los validadores queremos que cuando el usuario 
 haga click se elimine o agregue el id de la cancion al localStorage */
 btnFav.addEventListener('click', function () {
-    /* Si el id de la cancion ya se encontraba en 
-    el local storage y aprieta el boton 
-    queremos que este elimine el id y que se 
-    cambie el texto del boton */
+  
     if (favoritos.includes(captura)) {
         let indice = favoritos.indexOf(captura);
         favoritos.splice(indice, 1);
