@@ -9,8 +9,7 @@ let listArtistas = document.querySelector('.lisArt')
 //Utilizamos el metodo fetch que recibe como parametro la URL a la API, tambien conocido como endpoint
 fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart')
      /* Luego utilizamos el metodo .then() que tiene un callback 
-     que tiene como parametro la respuesta del fetch que es un metodo asincronico* 
-     por lo que nuestro codigo sigue funcionando*/
+    que tiene como parametro la respuesta del fetch*/
     .then(function (response) {
         /* Utilizando el metodo .json() convertimos la respuesta en un objeto literal */
         return response.json();
@@ -22,7 +21,7 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart')
         console.log(data);
         /* Seccion de las canciones */
         /* utilizamos un ciclo for para recorrer el array que tiene las canciones */
-        for (let i = 5 /* inicio */; i < 10 /* condicion */; i++ /* modificador */) {
+        for (let i = 0 ; i < 5 ; i++) {
             /* Asignamos un valor de la API a una variable para mostrarlo */
             let titulo = data.tracks.data[i].title
             let nombreArtista = data.tracks.data[i].artist.name

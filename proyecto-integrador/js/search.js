@@ -25,7 +25,7 @@ window.addEventListener('load', function () {
     if (artistas.style.display == 'none'&&albums.style.display == 'none'&&canciones.style.display == 'none') {
       noData.style.display = 'block'
     }
-}, 5000);
+}, 2000);
 })
 noData.style.display = 'none'
   serRes.innerText =`Resultados de búsqueda para: ${captura}`
